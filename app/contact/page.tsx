@@ -29,9 +29,9 @@ const offices = [
 ]
 
 const socialLinks = [
-  { name: "WhatsApp", href: "#", icon: MessageCircle },
-  { name: "Telegram", href: "#", icon: Send },
-  { name: "Email", href: "mailto:contact@matchplugagency.com", icon: Mail },
+  { name: "WhatsApp", href: "https://api.whatsapp.com/send?phone={{+1 (307) 218-5698}}", icon: MessageCircle },
+  { name: "Telegram", href: "https://telegram.me/@matchplugvip", icon: Send },
+  { name: "Email", href: "mailto:hello@matchplugagency.com", icon: Mail },
 ]
 
 export default function ContactPage() {

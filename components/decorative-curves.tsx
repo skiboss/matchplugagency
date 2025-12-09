@@ -18,7 +18,7 @@ export function DecorativeCurves({
   if (position === "bottom-left") {
     return (
       <svg
-        className={`absolute pointer-events-none w-48 md:w-64 lg:w-80 h-auto ${positionClasses[position]}`}
+        className={`absolute pointer-events-none w-48 md:w-64 lg:w-80 h-auto overflow-hidden ${positionClasses[position]}`}
         viewBox="0 0 300 150"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ export function DecorativeCurves({
   // Top-right corner curves matching the design
   return (
     <svg
-      className={`absolute pointer-events-none w-48 md:w-72 lg:w-96 h-auto ${positionClasses[position]}`}
+      className={`absolute pointer-events-none w-48 md:w-72 lg:w-96 h-auto overflow-hidden ${positionClasses[position]}`}
       viewBox="0 0 400 200"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

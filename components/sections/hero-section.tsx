@@ -5,21 +5,28 @@ import { DecorativeCurves } from "@/components/decorative-curves"
 import { ArrowRight } from "lucide-react"
 
 const clientLogos = [
-  { name: "BET", text: "BET SOFTWARE" },
-  { name: "dafabet", text: "dafabet" },
-  { name: "LEGACY", text: "LEGACY ARCADES" },
-  { name: "Betano", text: "Betano" },
-  { name: "1XBET", text: "1XBET" },
-  { name: "BC Game", text: "BC.GAME" },
+  { name: "BET", src: "/partners/bet_logo.png" },
+  { name: "dafabet", src: "/partners/dafabet_Logo.png" },
+  { name: "LEGACY", src: "/partners/legacy_logo.png" },
+  { name: "Betano", src: "/partners/betano_logo.png" },
+  { name: "1XBET", src: "/partners/1XBET_logo.png" },
+  { name: "BC Game", src: "/partners/bc_logo.png" },
+  { name: "22bet", src: "/partners/22bet_logo.png" },
+  { name: "96", src: "/partners/96_logo.png" },
+  { name: "Alibabet", src: "/partners/alibabet_logo.png" },
+  { name: "Rivalry", src: "/partners/rivalry_logo.png" },
 ]
 
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden">
-      <DecorativeCurves position="top-right" />
+      {/* Background Image */}
+      <div className="absolute inset-0 mr-16 w-full h-full bg-contain bg-right bg-no-repeat hidden lg:block" style={{ backgroundImage: "url('/home_hero.png')", backgroundPosition: 'right center' }} />
 
-      <div className="container mx-auto px-4 py-8 md:py-12 lg:py-16 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      {/* <DecorativeCurves position="top-right" /> */}
+
+      <div className="container mx-auto px-4 py-8 md:py-12 lg:py-24 lg:px-10 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
           {/* Left Column - Content */}
           <div className="pt-4 md:pt-8">
             {/* Badge */}
@@ -51,51 +58,8 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right Column - Dashboard Illustration */}
-          <div className="relative hidden lg:block">
-            <Image
-              src="/modern-analytics-dashboard-with-charts-graphs-purp.jpg"
-              alt="Analytics Dashboard"
-              width={500}
-              height={400}
-              className="w-full h-auto"
-              priority
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-primary py-4 md:py-6 overflow-hidden">
-        <div className="container mx-auto px-4 lg:px-8 mb-4">
-          <p className="text-center text-primary-foreground text-sm md:text-base">
-            Trusted by leading brands in <span className="font-semibold">79+ countries</span>
-          </p>
-        </div>
-
-        {/* Marquee container */}
-        <div className="relative flex overflow-x-hidden">
-          {/* First set of logos */}
-          <div className="flex animate-marquee whitespace-nowrap">
-            {[...clientLogos, ...clientLogos].map((logo, index) => (
-              <span
-                key={`${logo.name}-${index}`}
-                className="mx-8 md:mx-12 text-sm md:text-base font-bold tracking-wide text-primary-foreground/90"
-              >
-                {logo.text}
-              </span>
-            ))}
-          </div>
-          {/* Duplicate set for seamless loop */}
-          <div className="flex absolute top-0 animate-marquee2 whitespace-nowrap">
-            {[...clientLogos, ...clientLogos].map((logo, index) => (
-              <span
-                key={`${logo.name}-dup-${index}`}
-                className="mx-8 md:mx-12 text-sm md:text-base font-bold tracking-wide text-primary-foreground/90"
-              >
-                {logo.text}
-              </span>
-            ))}
-          </div>
+          {/* Right Column - Background image area (no content) */}
+          <div className="relative hidden lg:block" />
         </div>
       </div>
     </section>

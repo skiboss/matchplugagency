@@ -85,8 +85,8 @@ export function ContactForm() {
       </div>
 
       {/* Phone Input with country code */}
-      <div className="relative flex items-center gap-4 border-b-2 border-muted-foreground/30 focus-within:border-primary transition-colors">
-        <div className="flex items-center gap-2 py-3 flex-shrink-0">
+      <div className="relative flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 border-b-2 border-muted-foreground/30 focus-within:border-primary transition-colors">
+        <div className="flex items-center gap-2 py-3 shrink-0">
           <span className="text-xl">{selectedCountry.flag}</span>
           <ChevronDown className="h-3 w-3 text-muted-foreground" />
           <span className="text-sm text-muted-foreground">{selectedCountry.code}</span>
@@ -94,9 +94,9 @@ export function ContactForm() {
         <input
           type="tel"
           placeholder=""
-          className="flex-1 bg-transparent border-0 px-0 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-0"
+          className="flex-1 bg-transparent border-0 px-0 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-0 min-w-0"
         />
-        <span className="text-xs text-muted-foreground whitespace-nowrap">( whatsapp/telegram )</span>
+        <span className="text-xs text-muted-foreground text-right sm:text-left">( whatsapp/telegram )</span>
       </div>
 
       {/* Message Textarea */}

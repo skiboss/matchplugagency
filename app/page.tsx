@@ -7,6 +7,7 @@ import { PillarsSection } from "@/components/sections/pillars-section"
 import { TestimonialsSection } from "@/components/sections/testimonials-section"
 import { HomeContactSection } from "@/components/sections/home-contact-section"
 import { FAQSection } from "@/components/faq-section"
+import { Trustbar } from "@/components/sections/trustbar"
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <Header />
       <main className="flex-1">
         <HeroSection />
+        <Trustbar />
         <AboutSection />
         <ServicesSection />
         <PillarsSection />

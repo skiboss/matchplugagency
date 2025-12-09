@@ -22,10 +22,10 @@ const faqs = [
 
 export function FAQSection() {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-dark-section text-dark-section-foreground">
+    <section className="py-12 md:py-16 lg:py-20 bg-primary text-white">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-8 md:mb-12">
-          <span className="text-sm font-semibold text-accent uppercase tracking-wider">FAQ</span>
+          <span className="text-lg text-white uppercase tracking-wider">FAQ</span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 text-balance">
             Most common question
             <br className="hidden sm:inline" /> about our services
@@ -40,7 +40,7 @@ export function FAQSection() {
                 value={`item-${index}`}
                 className="bg-dark-section-foreground/5 border-0 rounded-xl px-4 md:px-6 data-[state=open]:bg-dark-section-foreground/10"
               >
-                <AccordionTrigger className="text-left hover:no-underline py-4 md:py-5 gap-4 [&[data-state=open]>svg]:rotate-45">
+                <AccordionTrigger className="text-left hover:no-underline py-4 md:py-5 gap-4 text-white">
                   <span className="font-medium text-sm md:text-base pr-4">{faq.question}</span>
                 </AccordionTrigger>
                 <AccordionContent className="text-dark-section-foreground/70 pb-4 md:pb-5 text-sm md:text-base">

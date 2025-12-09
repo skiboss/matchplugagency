@@ -25,7 +25,7 @@ interface CaseStudyCardProps {
 
 export function CaseStudyCard({ study, onViewCaseStudy }: CaseStudyCardProps) {
   return (
-    <div className="bg-background border border-border rounded-lg p-5 md:p-6 hover:shadow-md transition-shadow">
+    <div className="bg-background border border-border rounded-xl p-5 md:p-6 hover:shadow-md transition-shadow">
       {/* Header row - Category and Brand Logo */}
       <div className="flex items-start justify-between mb-3">
         <span className="text-sm text-muted-foreground">{study.category}</span>
@@ -37,7 +37,7 @@ export function CaseStudyCard({ study, onViewCaseStudy }: CaseStudyCardProps) {
 
       {/* View Case Study Button and Timeline */}
       <div className="flex items-center justify-between mb-4">
-        <Button size="sm" onClick={() => onViewCaseStudy(study)} className="text-sm">
+        <Button size="sm" onClick={() => onViewCaseStudy(study)} className="text-sm rounded-full">
           View Case Study
         </Button>
         <span className="text-sm text-muted-foreground">Timeline: {study.timeline}</span>
@@ -53,7 +53,7 @@ export function CaseStudyCard({ study, onViewCaseStudy }: CaseStudyCardProps) {
             </span>
           ))}
         </div>
-        <span className="text-sm font-semibold text-green-500">ROAS : {study.roas}</span>
+        <span className="text-xs font-medium py-1 px-2.5 rounded-full bg-green-100 text-green-500">ROAS : {study.roas}</span>
       </div>
     </div>
   )

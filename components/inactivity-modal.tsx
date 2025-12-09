@@ -5,7 +5,7 @@ import { X, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
-const INACTIVITY_TIMEOUT = 5 * 60 * 1000 // 5 minutes in milliseconds
+const INACTIVITY_TIMEOUT = 1 * 60 * 1000 // 5 minutes in milliseconds
 
 export function InactivityModal() {
   const [isVisible, setIsVisible] = useState(false)

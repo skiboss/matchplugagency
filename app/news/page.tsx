@@ -87,19 +87,19 @@ export default function NewsPage() {
 
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center pt-8 md:pt-12">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">News</h1>
-              <p className="text-base md:text-lg text-muted-foreground px-4">
+              <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6">News</h1>
+              <p className="text-base md:text-2xl text-muted-foreground px-4 md:w-3/4 mx-auto">
                 Educational content that ranks, engages, and drives conversions
               </p>
             </div>
 
             {/* Category Filters - improved mobile scrolling */}
-            <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mt-8 md:mt-10 px-2">
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-5 mt-8 md:mt-10 md:w-2/4 mx-auto px-3">
               <Button
                 variant={selectedCategory === null ? "default" : "outline"}
                 size="sm"
                 onClick={() => setSelectedCategory(null)}
-                className="text-xs md:text-sm"
+                className="text-sm md:text-md rounded-full"
               >
                 All
               </Button>
@@ -109,7 +109,7 @@ export default function NewsPage() {
                   variant={selectedCategory === category ? "default" : "outline"}
                   size="sm"
                   onClick={() => setSelectedCategory(category)}
-                  className="text-xs md:text-sm"
+                  className="text-sm md:text-md rounded-full"
                 >
                   {category}
                 </Button>

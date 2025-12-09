@@ -27,7 +27,7 @@ export function PageLoader() {
 
   return (
     <div
-      className={`fixed inset-0 z-[100] flex items-center justify-center bg-background transition-opacity duration-500 ${
+      className={`fixed inset-0 z-100 flex items-center justify-center bg-background transition-opacity duration-500 ${
         isExiting ? "opacity-0" : "opacity-100"
       }`}
     >
@@ -42,10 +42,14 @@ export function PageLoader() {
 
           {/* Center logo */}
           <div className="flex items-center gap-1 animate-pulse">
-            <div className="w-12 h-12 md:w-16 md:h-16 bg-primary rounded flex items-center justify-center">
+            {/* <div className="w-12 h-12 md:w-16 md:h-16 bg-primary rounded flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-2xl md:text-3xl">M</span>
+            </div> */}
+            <div className="flex flex-col items-center justify-center">
+              <img src="/mp_logo.png" alt="Matchplug Agency" className="h-10" />
+              <div className="italic text-xs md:text-sm">...Fueling growth by delivering FTds</div>
             </div>
-            <div className="w-4 h-12 md:w-5 md:h-16 bg-accent rounded-sm" />
+            {/* <div className="w-4 h-12 md:w-5 md:h-16 bg-accent rounded-sm" /> */}
           </div>
 
           {/* Right floating cube */}
