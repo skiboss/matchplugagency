@@ -22,7 +22,7 @@ const faqs = [
 
 export function FAQSection() {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-primary text-white">
+    <section className="py-12 md:py-16 lg:py-20 bg-[#3740BE] text-white">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-8 md:mb-12">
           <span className="text-lg text-white uppercase tracking-wider">FAQ</span>

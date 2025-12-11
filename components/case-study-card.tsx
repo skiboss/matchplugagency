@@ -33,7 +33,7 @@ export function CaseStudyCard({ study, onViewCaseStudy }: CaseStudyCardProps) {
       </div>
 
       {/* Challenge/Title */}
-      <h3 className="text-lg md:text-xl font-semibold text-foreground mb-4 leading-tight">{study.challenge}</h3>
+      <h3 className="text-lg md:text-xl font-semibold text-foreground mb-12 leading-tight">{study.challenge}</h3>
 
       {/* View Case Study Button and Timeline */}
       <div className="flex items-center justify-between mb-4">
@@ -53,7 +53,7 @@ export function CaseStudyCard({ study, onViewCaseStudy }: CaseStudyCardProps) {
             </span>
           ))}
         </div>
-        <span className="text-xs font-medium py-1 px-2.5 rounded-full bg-green-100 text-green-500">ROAS : {study.roas}</span>
+        <span className="text-xs font-medium py-1 px-2.5 rounded-full bg-[#EEF8F1]/50 text-green-500">ROAS : {study.roas}</span>
       </div>
     </div>
   )

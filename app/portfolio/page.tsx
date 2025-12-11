@@ -161,7 +161,8 @@ const caseStudies = [
   },
 ]
 
-const filterTabs = ["All", "iGaming", "Crypto", "Meta"]
+// const filterTabs = ["All", "iGaming", "Crypto", "Meta"]
+const filterTabs = ["iGaming", "Crypto", "Meta"]
 
 export default function PortfolioPage() {
   const [activeFilter, setActiveFilter] = useState("All")
@@ -188,7 +189,7 @@ export default function PortfolioPage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative py-12 md:py-16 lg:py-20 overflow-hidden">
-          <DecorativeCurves position="top-right" />
+          {/* <DecorativeCurves position="top-right" /> */}
 
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center pt-8 md:pt-12">
@@ -203,7 +204,7 @@ export default function PortfolioPage() {
         {/* Filter Tabs */}
         <section className="py-6 md:py-8">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="flex flex-wrap items-center justify-center gap-3">
+            <div className="flex flex-wrap items-center gap-3">
               {filterTabs.map((tab) => (
                 <button
                   key={tab}

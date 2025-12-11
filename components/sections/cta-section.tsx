@@ -16,17 +16,17 @@ export function CTASection() {
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Dominate Your Market?</h2>
-          <p className="text-lg text-white mb-8">
-            Stop testing. Start dominating. Book a 15-minute strategy call and discover how we can flood your brand with
-            qualified FTDs at 400-800% ROAS.
+          <h2 className="text-3xl md:text-5xl font-medium mb-6 text-white">Start Dominating</h2>
+          <p className="text-xl sm:text-2xl text-white mb-8">
+            The market won’t wait for you to find an edge. Deploy our 98% uptime tech stack and 
+            secure your market share in 90 days.
           </p>
           <div className="flex items-center justify-center gap-4">
-            <Button size="lg" asChild className="group bg-white hover:bg-white text-primary rounded-full">
+            <Button size="lg" asChild className="text-base font-medium group bg-white hover:bg-white text-primary rounded-full">
               <Link href="/contact">
-                <Calendar className="mr-2 h-5 w-5" />
+                {/* <Calendar className="mr-2 h-5 w-5" /> */}
                 Book Strategy Call
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                {/* <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /> */}
               </Link>
             </Button>
           </div>

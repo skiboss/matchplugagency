@@ -83,33 +83,33 @@ export default function NewsPage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative py-12 md:py-16 lg:py-24 overflow-hidden">
-          <DecorativeCurves position="top-right" />
+          {/* <DecorativeCurves position="top-right" /> */}
 
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center pt-8 md:pt-12">
-              <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6">News</h1>
-              <p className="text-base md:text-2xl text-muted-foreground px-4 md:w-3/4 mx-auto">
+              <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold mb-4 md:mb-6">News</h1>
+              <p className="text-base md:text-xl font-normal text-muted-foreground px-4 md:w-3/4 mx-auto">
                 Educational content that ranks, engages, and drives conversions
               </p>
             </div>
 
             {/* Category Filters - improved mobile scrolling */}
-            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-5 mt-8 md:mt-10 md:w-2/4 mx-auto px-3">
-              <Button
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 mt-8 md:mt-12 md:w-4/6 mx-auto px-3">
+              {/* <Button
                 variant={selectedCategory === null ? "default" : "outline"}
                 size="sm"
                 onClick={() => setSelectedCategory(null)}
-                className="text-sm md:text-md rounded-full"
+                className="text-sm md:text-xl font-normal rounded-full md:px-6 md:py-4 bg-black/2 outline-[#2A38FD]/8"
               >
                 All
-              </Button>
+              </Button> */}
               {categories.map((category) => (
                 <Button
                   key={category}
                   variant={selectedCategory === category ? "default" : "outline"}
                   size="sm"
                   onClick={() => setSelectedCategory(category)}
-                  className="text-sm md:text-md rounded-full"
+                  className="text-sm md:text-xl font-normal rounded-full md:px-6 md:py-4 bg-black/2 outline-[#2A38FD]/8"
                 >
                   {category}
                 </Button>
@@ -117,11 +117,11 @@ export default function NewsPage() {
             </div>
           </div>
 
-          <DecorativeCurves position="bottom-left" />
+          {/* <DecorativeCurves position="bottom-left" /> */}
         </section>
 
         {/* Blog Posts - Changed to 2-column grid for horizontal cards */}
-        <section className="py-8 md:py-12 lg:py-20">
+        <section className="py-8 md:py-12 lg:py-18">
           <div className="container mx-auto px-4 lg:px-8">
             {filteredPosts.length > 0 ? (
               <div className="grid md:grid-cols-2 gap-4 md:gap-6">

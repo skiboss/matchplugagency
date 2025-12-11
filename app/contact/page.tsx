@@ -1,10 +1,10 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { DecorativeCurves } from "@/components/decorative-curves"
 import { ContactForm } from "@/components/contact-form"
 import { FAQSection } from "@/components/faq-section"
-import { Mail, MessageCircle, Send } from "lucide-react"
 import Link from "next/link"
 
 export const metadata: Metadata = {
@@ -29,9 +29,9 @@ const offices = [
 ]
 
 const socialLinks = [
-  { name: "WhatsApp", href: "https://api.whatsapp.com/send?phone={{+1 (307) 218-5698}}", icon: MessageCircle },
-  { name: "Telegram", href: "https://telegram.me/@matchplugvip", icon: Send },
-  { name: "Email", href: "mailto:hello@matchplugagency.com", icon: Mail },
+  { name: "WhatsApp", href: "https://api.whatsapp.com/send?phone={{+1 (307) 218-5698}}", icon: "/icons/whatsapp.svg" },
+  { name: "Telegram", href: "https://telegram.me/@matchplugvip", icon: "/icons/telegram.svg" },
+  { name: "Email", href: "mailto:hello@matchplugagency.com", icon: "/icons/mail.svg" },
 ]
 
 export default function ContactPage() {
@@ -46,7 +46,7 @@ export default function ContactPage() {
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center pt-8 md:pt-12">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">Contact Us</h1>
-              <p className="text-base md:text-lg text-muted-foreground px-4">
+              <p className="text-base md:text-lg text-muted-foreground px-4 w-3/5 mx-auto">
                 We don't help you participate in markets, we help you own them
               </p>
             </div>
@@ -61,10 +61,10 @@ export default function ContactPage() {
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
               {/* Left Column - Info */}
               <div className="order-2 lg:order-1">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-balance">
+                <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 text-balance">
                   Testing is for brands with time. You need territory.
                 </h2>
-                <p className="text-muted-foreground mb-8">
+                <p className="text-muted-foreground mb-8 text-2xl">
                   Join the partners dominating 79+ geos. 90-day market share guarantee. Get a free consultation!
                 </p>
 
@@ -87,7 +87,7 @@ export default function ContactPage() {
                           className="p-3 rounded-full border border-border hover:bg-secondary hover:border-primary/50 transition-colors"
                           aria-label={link.name}
                         >
-                          <link.icon className="h-5 w-5 text-muted-foreground" />
+                          <Image src={link.icon} alt={link.name} width={20} height={20} className="h-5 w-5" />
                         </Link>
                       ))}
                     </div>

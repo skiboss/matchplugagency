@@ -19,7 +19,7 @@ export function Header() {
   const pathname = usePathname()
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60 border-b border-border">
+    <header className="fixed top-0 mb-8 z-50 w-full bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60 border-b border-border">
       <nav className="container mx-auto flex items-center justify-between px-4 py-4 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
@@ -29,14 +29,14 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-11">
+        <div className="hidden lg:flex items-center gap-12">
           {navigation.map((item) => {
             const isActive = pathname === item.href
             return (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-lg font-medium transition-colors ${
                   isActive ? "text-muted-foreground" : "text-foreground hover:text-muted-foreground"
                 }`}
               >
@@ -48,7 +48,7 @@ export function Header() {
 
         {/* CTA Button */}
         <div className="hidden lg:block">
-          <Button asChild className="rounded-full px-4 py-2">
+          <Button asChild className="rounded-full text-base font-medium px-6 py-3">
             <Link href="/contact">Contact Us</Link>
           </Button>
         </div>
