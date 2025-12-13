@@ -37,13 +37,13 @@ export default function AboutPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section - matches Apage design */}
-        <section className="relative py-8 md:py-12 lg:py-24 overflow-hidden">
-          <div className="absolute inset-0 w-full h-full bg-contain bg-right bg-no-repeat hidden lg:block" style={{ backgroundImage: "url('/about_hero.png')", backgroundPosition: 'right center' }} />
+        <section className="relative py-8 md:py-12 lg:py-32 overflow-hidden">
+          <div className="absolute inset-0 sm:mt-12 w-full h-full bg-cover bg-right bg-no-repeat hidden lg:block" style={{ backgroundImage: "url('/about_hero.png')", backgroundPosition: 'right center' }} />
 
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
               {/* Left Column - Content */}
-              <div className="pt-4 md:pt-8">
+              <div className="pt-4 md:pt-7">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-4 md:mb-6">
                   We don't participate.
                   <br />
@@ -77,9 +77,9 @@ export default function AboutPage() {
         {/* Our Mission Section */}
         <section className="py-12 md:py-16 lg:py-18">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start max-w-6xl mx-auto">
               <h2 className="text-2xl sm:text-3xl md:text-5xl font-medium">Our Mission</h2>
-              <p className="text-muted-foreground text-base md:text-2xl font-light">
+              <p className="text-muted-foreground text-base md:text-2xl md:w-5/6 font-light">
                 Deliver measurable market share through aggressive, compliant FTD generation in regulated and grey
                 markets worldwide.
               </p>
@@ -90,14 +90,14 @@ export default function AboutPage() {
         {/* What Makes Us Different */}
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="max-w-5xl mx-auto">
-              <p className="text-[#02DC3B] bg-[#EEF8F1]/50 font-light text-xl py-2.5 px-3 inline-block mb-12 rounded-full">What Makes Us Different:</p>
+            <div className="max-w-6xl mx-auto">
+              <p className="text-[#02DC3B] bg-[#EEF8F1]/50 font-light text-xl py-2 px-3 inline-block mb-12 rounded-full">What Makes Us Different:</p>
 
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6">
                 {differentiators.map((item) => (
                   <div key={item.title} className="bg-[#000000]/1 py-4 px-3 rounded-[12px]">
-                    <Image src={item.icon} alt={item.title} width={32} height={32} className="h-8 w-8 mb-4 md:mb-6" />
-                    <h3 className="font-medium text-2xl">{item.title}</h3>
+                    <Image src={item.icon} alt={item.title} width={32} height={32} className="h-8 w-8 mb-4 md:mb-14" />
+                    <h3 className="font-medium text-2xl mb-3">{item.title}</h3>
                     <p className="text-muted-foreground font-light text-xl">{item.description}</p>
                   </div>
                 ))}
@@ -109,14 +109,14 @@ export default function AboutPage() {
         {/* Our Layered Data Advantage */}
         <section className="py-12 md:py-16 lg:py-20">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl sm:text-3xl md:text-6xl font-medium mb-6">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl md:text-6xl font-medium mb-6.5">
                 Our Layered
                 <br />
                 Data Advantage:
               </h2>
 
-              <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+              <div className="grid md:grid-cols-2 gap-8 md:gap-18">
                 {/* Left Column */}
                 <div className="space-y-6 flex flex-col justify-between">
                   <p className="text-xl font-light text-muted-foreground">
@@ -132,7 +132,7 @@ export default function AboutPage() {
 
                 {/* Right Column - Cards */}
                 <div className="space-y-12">
-                  <div className="p-5 bg-[#F1F2FF]/40 rounded-xl">
+                  <div className="py-6 px-4 bg-[#F1F2FF]/40 rounded-xl">
                     <h3 className="font-medium mb-3 text-2xl">Survival technology</h3>
                     <p className="text-xl font-light text-muted-foreground">
                       Proprietary cloaking methods keep campaigns live when competitors get banned.

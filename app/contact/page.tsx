@@ -41,7 +41,7 @@ export default function ContactPage() {
       <main className="flex-1">
         {/* Hero Section - Updated curves to span full width */}
         <section className="relative py-12 md:py-16 lg:py-24 overflow-hidden">
-          <DecorativeCurves position="top-right" />
+          {/* <DecorativeCurves position="top-right" /> */}
 
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center pt-8 md:pt-12">
@@ -52,7 +52,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <DecorativeCurves position="bottom-left" />
+          {/* <DecorativeCurves position="bottom-left" /> */}
         </section>
 
         {/* Contact Section - Improved mobile layout and spacing */}
@@ -96,7 +96,7 @@ export default function ContactPage() {
               </div>
 
               {/* Right Column - Form */}
-              <div className="order-1 lg:order-2 bg-card rounded-2xl border border-border p-5 sm:p-6 lg:p-8 shadow-sm">
+              <div className="order-1 lg:order-2 bg-card rounded-2xl border border-border p-5 sm:p-6 lg:p-8 shadow-[inset_1px_2px_8px_0px_rgba(0,0,0,0.08)]">
                 <h3 className="text-lg sm:text-xl font-semibold mb-6">Send us a brief</h3>
                 <ContactForm />
               </div>

@@ -17,7 +17,7 @@ const caseStudies = [
     timeline: "6 months",
     roas: "720%",
     tags: ["MetaAds", "Sports"],
-    brandLogo: "96",
+    brandLogo: "/partners/96_logo.png",
     client: "Licensed Sportsbook (UK-facing)",
     industry: "Sports Betting",
     strategy: [
@@ -42,7 +42,7 @@ const caseStudies = [
     timeline: "4 months",
     roas: "580%",
     tags: ["Crypto", "Meta"],
-    brandLogo: "BC",
+    brandLogo: "/partners/bc_logo.png",
     client: "BC Games Style Crypto Casino",
     industry: "Crypto Casino",
     strategy: [
@@ -67,7 +67,7 @@ const caseStudies = [
     timeline: "8 months",
     roas: "650%",
     tags: ["MetaAds", "Cappers"],
-    brandLogo: "22",
+    brandLogo: "/partners/22bet_logo.png",
     client: "Regional African Sportsbook",
     industry: "Sports Betting",
     strategy: [
@@ -92,7 +92,7 @@ const caseStudies = [
     timeline: "5 months",
     roas: "520%",
     tags: ["Crypto", "Google"],
-    brandLogo: "EX",
+    brandLogo: "/partners/1XBET_logo.png",
     client: "Emerging Crypto Exchange",
     industry: "Crypto/Web3",
     strategy: [
@@ -117,7 +117,7 @@ const caseStudies = [
     timeline: "6 months",
     roas: "480%",
     tags: ["iGaming", "Meta"],
-    brandLogo: "BT",
+    brandLogo: "/partners/betano_logo.png",
     client: "LATAM Online Casino",
     industry: "Online Casino",
     strategy: [
@@ -142,7 +142,7 @@ const caseStudies = [
     timeline: "12 months",
     roas: "487%",
     tags: ["B2B", "Google"],
-    brandLogo: "SW",
+    brandLogo: "/partners/dafabet_Logo.png",
     client: "iGaming Software Provider",
     industry: "B2B iGaming",
     strategy: [
@@ -188,13 +188,14 @@ export default function PortfolioPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-12 md:py-16 lg:py-20 overflow-hidden">
+        <section className="relative py-12 md:py-16 lg:py-20 overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/blooper.png')" }}>
+          <div className="absolute inset-0 bg-white/80"></div>
           {/* <DecorativeCurves position="top-right" /> */}
 
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center pt-8 md:pt-12">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">Proven Domination</h1>
-              <p className="text-base md:text-lg text-muted-foreground px-4">
+              <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold mb-4 md:mb-6">Proven Domination</h1>
+              <p className="text-base md:text-xl font-normal text-muted-foreground px-4 md:w-4/6 mx-auto">
                 See how we've helped iGaming and Web3 brands conquer their geos in 90 days or less.
               </p>
             </div>
@@ -209,10 +210,10 @@ export default function PortfolioPage() {
                 <button
                   key={tab}
                   onClick={() => setActiveFilter(tab)}
-                  className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
+                  className={`px-5 py-2 rounded-full cursor-pointer text-sm font-medium transition-colors ${
                     activeFilter === tab
                       ? "bg-secondary text-foreground"
-                      : "bg-transparent text-muted-foreground hover:bg-secondary/50"
+                      : "bg-black/2 text-muted-foreground outline outline-[#2A38FD]/8 hover:bg-secondary/50"
                   } border border-border`}
                 >
                   {tab}

@@ -82,7 +82,8 @@ export default function NewsPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-12 md:py-16 lg:py-24 overflow-hidden">
+        <section className="relative py-12 md:py-18 overflow-hidden">
+          <div className="absolute inset-0 sm:mt-15 w-full h-4/6 bg-cover bg-center bg-no-repeat hidden lg:block" style={{ backgroundImage: "url('/LooperGroup.png')"}} />
           {/* <DecorativeCurves position="top-right" /> */}
 
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -94,22 +95,22 @@ export default function NewsPage() {
             </div>
 
             {/* Category Filters - improved mobile scrolling */}
-            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 mt-8 md:mt-12 md:w-4/6 mx-auto px-3">
-              {/* <Button
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 mt-8 md:mt-12 md:w-5/7 mx-auto px-3">
+              <Button
                 variant={selectedCategory === null ? "default" : "outline"}
                 size="sm"
                 onClick={() => setSelectedCategory(null)}
-                className="text-sm md:text-xl font-normal rounded-full md:px-6 md:py-4 bg-black/2 outline-[#2A38FD]/8"
+                className="text-sm md:text-xl font-normal rounded-full md:px-6 md:py-4 bg-black/2 outline-[#2A38FD]/8 text-secondary-foreground hover:text-primary-foreground"
               >
                 All
-              </Button> */}
+              </Button>
               {categories.map((category) => (
                 <Button
                   key={category}
                   variant={selectedCategory === category ? "default" : "outline"}
                   size="sm"
                   onClick={() => setSelectedCategory(category)}
-                  className="text-sm md:text-xl font-normal rounded-full md:px-6 md:py-4 bg-black/2 outline-[#2A38FD]/8"
+                  className="text-sm md:text-xl font-normal rounded-full md:px-6 md:py-4 bg-black/2 outline-[#2A38FD]/8 text-secondary-foreground hover:text-primary-foreground"
                 >
                   {category}
                 </Button>
@@ -121,7 +122,7 @@ export default function NewsPage() {
         </section>
 
         {/* Blog Posts - Changed to 2-column grid for horizontal cards */}
-        <section className="py-8 md:py-12 lg:py-18">
+        <section className="pb-8 md:pb-12 lg:pb-20">
           <div className="container mx-auto px-4 lg:px-8">
             {filteredPosts.length > 0 ? (
               <div className="grid md:grid-cols-2 gap-4 md:gap-6">

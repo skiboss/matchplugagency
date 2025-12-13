@@ -2,6 +2,7 @@
 
 import { X, TrendingUp, CheckCircle2 } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
+import Image from "next/image"
 
 interface CaseStudy {
   id: string
@@ -53,7 +54,15 @@ export function CaseStudyModal({ study, isOpen, onClose }: CaseStudyModalProps) 
               <h2 className="text-2xl md:text-3xl font-bold">{study.client}</h2>
               <p className="text-muted-foreground mt-1">{study.category}</p>
             </div>
-            <span className="text-4xl font-bold text-green-500">{study.brandLogo}</span>
+            <div className="w-8 h-8 flex items-center justify-center">
+                      <Image 
+                        src={study.brandLogo} 
+                        alt={study.client} 
+                        width={32} 
+                        height={32} 
+                        className="h-8 w-8 object-contain"
+                      />
+                    </div>
           </div>
 
           {/* Challenge */}

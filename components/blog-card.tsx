@@ -19,7 +19,7 @@ export function BlogCard({ post }: BlogCardProps) {
     <Link href={`/news/${post.id}`} className="group block">
       <article className="flex flex-col sm:flex-row gap-4 sm:gap-6 p-4 rounded-xl hover:bg-secondary/50 transition-colors">
         {/* Image - Left side */}
-        <div className="relative w-full sm:w-48 md:w-58 h-40 sm:h-36 md:h-54 shrink-0 rounded-lg md:rounded-none overflow-hidden">
+        <div className="relative w-full sm:w-48 md:w-58 h-40 sm:h-36 md:h-50 shrink-0 rounded-lg md:rounded-none overflow-hidden">
           <Image
             src={post.image || "/placeholder.svg"}
             alt={post.title}
@@ -30,7 +30,7 @@ export function BlogCard({ post }: BlogCardProps) {
 
         {/* Content - Right side */}
         <div className="flex flex-col justify-center flex-1 min-w-0">
-          <div className="flex uppercase items-center gap-3 mb-6">
+          <div className="flex uppercase items-center gap-3 mb-4">
             <div className="flex items-center gap-1.5 text-sm font-medium text-[#5B606B]">
               {/* <Clock className="h-4 w-4" /> */}
               <span>{post.readTime} read</span>
@@ -39,7 +39,7 @@ export function BlogCard({ post }: BlogCardProps) {
             <span className="text-sm font-medium text-[#5B606B]">{post.category}</span>
           </div>
 
-          <h3 className="font-normal text-xl mb-23 line-clamp-2 group-hover:text-primary transition-colors">
+          <h3 className="font-normal text-xl mb-15 md:mb-18 line-clamp-2 group-hover:text-primary transition-colors">
             {post.title}
           </h3>
 

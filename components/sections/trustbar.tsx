@@ -39,7 +39,7 @@ export function Trustbar() {
                   alt={logo.name}
                   width={80}
                   height={50}
-                  className="h-10 md:h-12 w-auto object-contain"
+                  className="h-10 md:h-12 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
                 />
               </div>
             ))}

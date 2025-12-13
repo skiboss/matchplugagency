@@ -22,7 +22,7 @@ export function CTASection() {
             secure your market share in 90 days.
           </p>
           <div className="flex items-center justify-center gap-4">
-            <Button size="lg" asChild className="text-base font-medium group bg-white hover:bg-white text-primary rounded-full">
+            <Button size="lg" asChild className="text-base py-5.5 px-12.5 font-medium group bg-white hover:bg-white text-primary rounded-full">
               <Link href="/contact">
                 {/* <Calendar className="mr-2 h-5 w-5" /> */}
                 Book Strategy Call
