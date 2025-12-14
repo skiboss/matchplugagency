@@ -75,26 +75,6 @@ export default function ServicesPage() {
 
         {/* Services Section - using the component */}
         <ServicesSection />
-
-        {/* What Makes Us Different */}
-        <section className="py-12 md:py-16">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="max-w-6xl mx-auto">
-              <p className="text-[#02DC3B] bg-[#EEF8F1]/50 font-light text-xl py-2 px-3 inline-block mb-12 rounded-full">What Makes Us Different:</p>
-
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6">
-                {differentiators.map((item) => (
-                  <div key={item.title} className="bg-[#000000]/1 py-4 px-3 rounded-[12px]">
-                    <Image src={item.icon} alt={item.title} width={32} height={32} className="h-8 w-8 mb-4 md:mb-14" />
-                    <h3 className="font-medium text-2xl mb-3">{item.title}</h3>
-                    <p className="text-muted-foreground font-light text-xl">{item.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
         
         {/* Our Pillars */}
         <PillarsSection />
