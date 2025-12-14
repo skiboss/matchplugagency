@@ -44,7 +44,7 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
               {/* Left Column - Content */}
               <div className="pt-4 md:pt-7">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-4 md:mb-6">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-20 font-semibold tracking-tight mb-4 md:mb-6">
                   We don't participate.
                   <br />
                   <span className="text-foreground">We Dominate.</span>

@@ -21,10 +21,10 @@ export function Trustbar() {
   return (
     <section className="relative overflow-hidden">
 
-      <div className="bg-primary py-4 md:py-6 overflow-hidden">
-        <div className="container mx-auto px-4 lg:px-8 mb-4">
-          <p className="text-center text-primary-foreground text-sm md:text-lg">
-            Trusted by leading brands in <span className="font-semibold">79+ countries</span>
+      <div className="bg-primary py-4 md:py-12 md:mt-6 overflow-hidden">
+        <div className="container mx-auto px-4 lg:px-8 mb-16">
+          <p className="text-center text-primary-foreground text-sm md:text-3xl font-medium">
+            Trusted by leading brands in <span className="">79+ countries</span>
           </p>
         </div>
 
