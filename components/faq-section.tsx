@@ -22,11 +22,10 @@ const faqs = [
 
 export function FAQSection() {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-[#3740BE] text-white">
+    <section className="py-12 md:py-16 lg:py-18 bg-[#3740BE] text-white">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-8 md:mb-14">
-          <span className="text-4xl font-medium text-white uppercase tracking-wider mb-8">FAQ</span>
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-medium mt-2 text-balance">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-medium text-balance">
             Most common question
             <br className="hidden sm:inline" /> about our services
           </h2>
@@ -38,7 +37,13 @@ export function FAQSection() {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-dark-section-foreground/5 border-0 rounded-xl px-4 md:px-6 data-[state=open]:bg-dark-section-foreground/10"
+                className="rounded-[20px] border-2 px-4 md:px-6"
+                style={{
+                  borderColor: "transparent",
+                  background: "linear-gradient(135deg, rgba(255,255,255,0.24), rgba(255,255,255,0.08)), linear-gradient(90deg, #475CBC -4.04%, #34A853 105.66%)",
+                  backgroundClip: "padding-box, border-box",
+                  backgroundOrigin: "padding-box, border-box",
+                }}
               >
                 <AccordionTrigger className="text-left hover:no-underline py-4 md:py-5 gap-4 text-white">
                   <span className="font-normal text-sm md:text-2xl pr-4">{faq.question}</span>

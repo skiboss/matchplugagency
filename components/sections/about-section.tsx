@@ -26,9 +26,9 @@ export function AboutSection() {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Who We Are Section with two columns */}
         <div className="max-w-5xl mx-auto mb-20 md:mb-24">
-          <div className="text-center mb-10 md:mb-18">
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-medium mb-4">Who We Are</h2>
-            <p className="text-muted-foreground w-3/5 mx-auto text-base md:text-2xl">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-medium mb-4">Who we are</h2>
+            <p className="text-muted-foreground w-4/7 font-normal mx-auto text-base md:text-lg">
               Matchplug Agency is the acquisition partner for iGaming and Web3 brands that refuse to play small.
             </p>
           </div>
@@ -37,9 +37,9 @@ export function AboutSection() {
             {/* Left Column - Quote and Button */}
             <div className="flex flex-col justify-between">
               <div className="mb-8">
-                <p className="text-base md:text-2xl font-light text-black mb-3">
+                <p className="text-base md:text-xl font-light text-foreground mb-3">
                   While other agencies only optimize for "efficiency," we optimize for dominance. We don't help you participate in markets —
-                  <span className="text-lg md:text-2xl font-medium text-green-400"> we help you own them.</span>
+                  <span className="text-lg md:text-2xl font-medium text-[#02DC3B]"> we help you own them.</span>
                 </p>
                 
               </div>
@@ -63,20 +63,20 @@ export function AboutSection() {
 
         {/* The Hard Truth */}
         <div>
-          <h3 className="text-2xl sm:text-4xl md:text-5xl mb-8 md:mb-14 font-light">The Hard Truth</h3>
+          <h3 className="text-2xl sm:text-4xl md:text-5xl mb-8 md:mb-15 font-light">The Hard Truth</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-9 mt-4">
             <div className="relative overflow-hidden rounded-lg pt-6 pb-24 px-6 bg-cover bg-bottom" style={{ backgroundImage: "url('/about/red_bg.png')" }}>
-              <p className="text-muted-foreground text-sm md:text-2xl font-light relative z-10">
+              <p className="text-muted-foreground text-sm md:text-xl font-normal relative z-10">
                 Meta's algorithm needs 50-100+ creative variations to find winners.
               </p>
             </div>
             <div className="relative overflow-hidden rounded-lg pt-6 pb-24 px-6 bg-cover bg-no-repeat bg-bottom" style={{ backgroundImage: "url('/about/green_bg.png')" }}>
-              <p className="text-muted-foreground text-sm md:text-2xl font-light relative z-10">
+              <p className="text-muted-foreground text-sm md:text-xl font-normal relative z-10">
                 Google Performance Max demands dynamic asset libraries.
               </p>
             </div>
             <div className="relative overflow-hidden rounded-lg pt-6 pb-24 px-6 bg-cover bg-bottom" style={{ backgroundImage: "url('/about/orange_bg.png')" }}>
-              <p className="text-muted-foreground text-sm md:text-2xl font-light relative z-10">
+              <p className="text-muted-foreground text-sm md:text-xl font-normal relative z-10">
                 TikTok-style native content dominates Taboola and generic creatives don't convert.
               </p>
             </div>

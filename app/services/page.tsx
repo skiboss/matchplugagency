@@ -7,6 +7,8 @@ import { ServicesSection } from "@/components/sections/services-section"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { PillarsSection } from "@/components/sections/pillars-section"
+import { OurClientsSection } from "@/components/sections/clients-section"
+import { OurLegacySection } from "@/components/sections/legacy-section"
 
 export const metadata: Metadata = {
   title: "Services | Matchplug Agency",
@@ -38,36 +40,31 @@ export default function ServicesPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-8 md:py-12 lg:py-32 overflow-hidden">
-          <div className="absolute inset-0 sm:mt-12 w-full h-full bg-cover bg-right bg-no-repeat hidden lg:block" style={{ backgroundImage: "url('/about_hero.png')", backgroundPosition: 'right center' }} />
-
+        <section className="relative py-12 md:py-20 lg:py-32 overflow-hidden">
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
-              {/* Left Column - Content */}
-              <div className="pt-4 md:pt-7">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-20 font-semibold tracking-tight mb-4 md:mb-6">
+            <div className="flex flex-col items-center justify-center text-center">
+              <div className="max-w-2xl">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 md:mb-6">
                   The Complete
                   <br />
                   <span className="text-foreground">Acquisition Arsenal</span>
                 </h1>
 
-                <p className="text-base md:text-xl text-muted-foreground max-w-xl mb-6 md:mb-10">
+                <p className="text-base md:text-lg text-muted-foreground mb-8 md:mb-10">
                   We don't help you participate in markets— we help you own them through aggressive, compliant FTD generation
                 </p>
 
-                <div className="flex flex-col sm:flex-row items-start gap-3 md:gap-4">
-                  <Button size="lg" asChild className="group w-full text-base font-medium sm:w-auto rounded-full md:py-4 md:px-11">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <Button size="lg" asChild className="group text-base font-medium rounded-full md:py-4 md:px-11">
                     <Link href="/contact">
                       Book Strategy Call
                     </Link>
                   </Button>
-                  <Button size="lg" variant="outline" asChild className="w-full text-base font-medium sm:w-auto bg-transparent rounded-full md:py-4 md:px-11 outline outline-primary text-primary">
+                  <Button size="lg" variant="outline" asChild className="text-base font-medium bg-transparent rounded-full md:py-4 md:px-11 outline outline-primary text-primary">
                     <Link href="/portfolio">View Case Studies</Link>
                   </Button>
                 </div>
               </div>
-
-              {/* Right Column - Background image area (no content) */}
             </div>
           </div>
         </section>
@@ -75,10 +72,17 @@ export default function ServicesPage() {
 
         {/* Services Section - using the component */}
         <ServicesSection />
-        
+
         {/* Our Pillars */}
         <PillarsSection />
 
+        {/* Our Legacy  */}
+        <OurLegacySection />
+
+        {/* Our Clients */}
+        <OurClientsSection />
+
+        {/* Call to action Section */}
         <CTASection />
       </main>
       <Footer />

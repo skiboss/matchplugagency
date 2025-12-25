@@ -162,7 +162,7 @@ const caseStudies = [
 ]
 
 // const filterTabs = ["All", "iGaming", "Crypto", "Meta"]
-const filterTabs = ["iGaming", "Crypto", "Meta"]
+const filterTabs = ["IGaming", "Crypto", "Meta"]
 
 export default function PortfolioPage() {
   const [activeFilter, setActiveFilter] = useState("All")
@@ -188,32 +188,33 @@ export default function PortfolioPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-12 md:py-16 lg:py-20 overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/blooper.png')" }}>
-          <div className="absolute inset-0 bg-white/80"></div>
-          {/* <DecorativeCurves position="top-right" /> */}
+        <section className="relative py-12 md:py-20 lg:py-24 md:mt-20 overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/blooper.png')" }}>
+          <div className="absolute inset-0 bg-white/40"></div>
 
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
-            <div className="max-w-3xl mx-auto text-center pt-8 md:pt-12">
-              <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold mb-4 md:mb-6">Proven Domination</h1>
-              <p className="text-base md:text-xl font-normal text-muted-foreground px-4 md:w-4/6 mx-auto">
-                See how we've helped iGaming and Web3 brands conquer their geos in 90 days or less.
-              </p>
+            <div className="flex flex-col items-center justify-center text-center">
+              <div className="max-w-2xl bg-white/5 inner-shadow-2xl rounded-4xl backdrop-blur-3xl">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold mb-4 md:mb-8 text-foreground">Proven Domination</h1>
+                <p className="text-base md:text-lg font-normal text-muted-foreground md:w-5/7 mx-auto">
+                  See how we've helped iGaming and Web3 brands conquer their geos in 90 days or less.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Filter Tabs */}
-        <section className="py-6 md:py-8">
+        <section className="py-4 md:py-6">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3 md:gap-8">
               {filterTabs.map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveFilter(tab)}
-                  className={`px-5 py-2 rounded-full cursor-pointer text-sm font-medium transition-colors ${
+                  className={`px-5 py-2 rounded-full cursor-pointer text-sm md:text-xl font-medium transition-colors ${
                     activeFilter === tab
-                      ? "bg-secondary text-foreground"
-                      : "bg-black/2 text-muted-foreground outline outline-[#2A38FD]/8 hover:bg-secondary/50"
+                      ? "bg-primary text-primary-foreground hover:bg-primary hover:text-white"
+                      : "bg-black/2 text-foreground outline outline-[#2A38FD]/8 hover:bg-secondary/50"
                   } border border-border`}
                 >
                   {tab}
@@ -224,7 +225,7 @@ export default function PortfolioPage() {
         </section>
 
         {/* Case Studies Grid */}
-        <section className="py-8 md:py-12 lg:py-16">
+        <section className="py-8 md:py-10 lg:py-12 lg:mb-8">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="grid md:grid-cols-2 gap-4 md:gap-6">
               {filteredStudies.map((study) => (

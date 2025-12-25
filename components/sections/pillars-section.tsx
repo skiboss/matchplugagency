@@ -34,8 +34,8 @@ export function PillarsSection() {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12 md:mb-18">
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-medium mb-4">Our Pillars</h2>
-          <p className="text-muted-foreground text-base md:text-2xl font-normal">The Four Systems That Guarantee Market Dominance</p>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-medium text-foreground mb-4">Our Pillars</h2>
+          <p className="text-muted-foreground text-base md:text-lg font-normal">The Four Systems That Guarantee Market Dominance</p>
         </div>
 
         {/* Pillars Grid - 2x2 */}
@@ -55,7 +55,7 @@ export function PillarsSection() {
 
               {/* Content */}
               <h3 className="font-medium text-lg md:text-2xl mb-3">{pillar.title}</h3>
-              <p className="text-lg font-light text-muted-foreground">{pillar.description}</p>
+              <p className="text-lg font-normal text-muted-foreground">{pillar.description}</p>
             </div>
           ))}
         </div>

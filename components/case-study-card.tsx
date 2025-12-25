@@ -31,26 +31,26 @@ export function CaseStudyCard({ study, onViewCaseStudy }: CaseStudyCardProps) {
       {/* Header row - Category and Brand Logo */}
       <div className="flex items-start justify-between mb-2">
         <span className="text-base text-muted-foreground">{study.category}</span>
-        <div className="w-8 h-8 flex items-center justify-center">
+        <div className="w-12 h-12 flex items-center justify-center">
           <Image 
             src={study.brandLogo} 
             alt={study.client} 
             width={32} 
             height={32} 
-            className="h-8 w-8 object-contain"
+            className="h-12 w-12 object-contain"
           />
         </div>
       </div>
 
       {/* Challenge/Title */}
-      <h3 className="text-lg md:text-xl font-semibold text-foreground mb-12 leading-tight">{study.challenge}</h3>
+      <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-foreground mb-12 leading-tight max-w-10/12">{study.challenge}</h3>
 
       {/* View Case Study Button and Timeline */}
       <div className="flex items-center justify-between mb-4">
         <Button size="sm" onClick={() => onViewCaseStudy(study)} className="text-base font-medium px-6 py-3 rounded-full">
           View Case Study
         </Button>
-        <span className="text-base font-normal text-muted-foreground">Timeline: {study.timeline}</span>
+        <span className="text-sm md:text-base font-normal text-foreground">Timeline: {study.timeline}</span>
       </div>
 
       {/* Tags and ROAS */}

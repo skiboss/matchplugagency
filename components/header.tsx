@@ -8,7 +8,7 @@ import { Menu, X } from "lucide-react"
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "Who We Are", href: "/about" },
+  { name: "Who we are", href: "/about" },
   { name: "Services", href: "/services" },
   { name: "Portfolio", href: "/portfolio" },
   { name: "News", href: "/news" },
@@ -36,8 +36,8 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-lg font-medium transition-colors ${
-                  isActive ? "text-muted-foreground" : "text-foreground hover:text-muted-foreground"
+                className={`text-lg transition-colors ${
+                  isActive ? "text-foreground font-medium" : "text-[#A3A3A3] hover:text-muted-foreground"
                 }`}
               >
                 {item.name}

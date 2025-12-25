@@ -23,9 +23,9 @@ export function TestimonialsSection() {
     <section className="py-16 md:py-20 lg:py-24">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-10 md:mb-14">
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-medium mb-6">You're In Good Hands</h2>
-          <p className="text-muted-foreground text-sm md:text-2xl font-normal">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-medium mb-4">You're In Good Hands</h2>
+          <p className="text-muted-foreground text-sm md:text-lg font-normal">
             You don't have to take our words, hear from our clients
           </p>
         </div>
@@ -35,7 +35,7 @@ export function TestimonialsSection() {
           {testimonials.map((testimonial, index) => (
             <div key={index} className={`p-6 md:px-6 md:py-10 border border-border rounded-2xl flex flex-col justify-between ${testimonial.bgColor}`}>
               {/* Testimonial Text */}
-              <p className="text-muted-foreground text-sm md:text-base font-regular leading-relaxed mb-4 md:mb-20">
+              <p className="text-foreground text-sm md:text-base font-regular tracking-wide [word-spacing:0.3rem] leading-relaxed mb-4 md:mb-20">
                 {testimonial.text}
               </p>
 

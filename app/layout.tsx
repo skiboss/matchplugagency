@@ -1,13 +1,13 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Inter, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { PageLoader } from "@/components/page-loader"
 import { MobileBottomCTA } from "@/components/mobile-bottom-cta"
 import { InactivityModal } from "@/components/inactivity-modal"
 import "./globals.css"
 
-const geist = Geist({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
@@ -50,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={geist.className}>
+    <html lang="en" className={inter.className}>
       <body className={`font-sans antialiased`}>
         <PageLoader />
         {children}

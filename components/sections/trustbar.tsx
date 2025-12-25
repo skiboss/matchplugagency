@@ -21,9 +21,9 @@ export function Trustbar() {
   return (
     <section className="relative overflow-hidden">
 
-      <div className="bg-primary py-4 md:py-12 md:mt-6 overflow-hidden">
-        <div className="container mx-auto px-4 lg:px-8 mb-16">
-          <p className="text-center text-primary-foreground text-sm md:text-3xl font-medium">
+      <div className="bg-primary py-4 md:py-12 overflow-hidden">
+        <div className="container mx-auto px-4 lg:px-8 mb-14">
+          <p className="text-center text-primary-foreground text-sm md:text-2xl font-medium">
             Trusted by leading brands in <span className="">79+ countries</span>
           </p>
         </div>
@@ -33,7 +33,7 @@ export function Trustbar() {
           {/* First set of logos */}
           <div className="flex animate-marquee whitespace-nowrap">
             {[...clientLogos, ...clientLogos].map((logo, index) => (
-              <div key={`${logo.name}-${index}`} className="mx-6 md:mx-10 shrink-0">
+              <div key={`${logo.name}-${index}`} className="mx-6 md:mx-9 shrink-0">
                 <Image
                   src={logo.src}
                   alt={logo.name}

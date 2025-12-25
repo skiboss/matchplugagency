@@ -19,65 +19,54 @@ const clientLogos = [
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden">
-      {/* Background Image */}
-      {/* <div
-        className="absolute inset-0 sm:mt-10 mr-16 w-full h-full bg-cover bg-right bg-no-repeat hidden lg:block"
-        style={{
-          backgroundImage: "url('/home_hero.png')",
-          backgroundPosition: "right center",
-        }}
-      /> */}
-                <div className="absolute inset-0 sm:mt-8 ml-auto w-7/12 h-full bg-cover bg-no-repeat hidden lg:block" style={{ backgroundImage: "url('/home_hero.png')", backgroundPosition: 'right center' }} />
-
-
-      {/* <DecorativeCurves position="top-right" /> */}
-
-      <div className="container mx-auto px-4 py-8 md:py-12 lg:py-24 lg:px-10 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
-          {/* Left Column - Content */}
-          <div className="pt-4 md:pt-10">
+    <section 
+      className="relative py-12 md:py-20 lg:py-28 overflow-hidden bg-white"
+      style={{
+        backgroundImage: "url('/home_hero.png')",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
+        <div className="flex flex-col items-center justify-center text-center">
+          <div className="max-w-3xl">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-[#EEF8F1]/50 text-[#02DC3B] text-base font-medium mb-4">
-              Dominance for iGaming & Web3
+            <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-[#EEF8F1]/50 text-[#02DC3B] text-base font-medium mb-6 md:mb-8">
+              Domination for iGaming & Web3
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-20 tracking-tight text-balance mb-4 md:mb-10">
+            <h1 className="text-4xl text-foreground sm:text-5xl md:text-6xl font-semibold leading-tight tracking-tight text-balance mb-6 md:mb-8">
               Paid media and acquisition agency
             </h1>
 
             {/* Subheadline */}
-            <p className="text-xl font-normal md:text-lg text-muted-foreground max-w-xl mb-6 md:mb-10 text-pretty">
-              We help iGaming and Web3 brands scale fast with qualified FTDs and
-              400-800% ROAS in every market.
+            <p className="text-lg md:text-xl text-muted-foreground font-normal max-w-xl mx-auto mb-8 md:mb-10 text-pretty">
+              We help iGaming and Web3 brands scale fast with qualified FTDs and 400-800% ROAS in every market.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-start gap-3 md:gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
               <Button
                 size="lg"
                 asChild
-                className="group w-full text-base font-medium sm:w-auto rounded-full md:py-4 md:px-11"
+                className="group text-base font-medium rounded-full px-8 md:px-10 py-3 md:py-4"
               >
                 <Link href="/contact">
                   Book Strategy Call
-                  {/* <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /> */}
                 </Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 asChild
-                className="w-full text-base font-medium sm:w-auto bg-transparent rounded-full md:py-4 md:px-11 outline outline-primary text-primary"
+                className="text-base font-medium rounded-full px-8 md:px-10 py-3 md:py-4 border border-primary text-primary hover:bg-primary/5"
               >
                 <Link href="/portfolio">View Case Studies</Link>
               </Button>
             </div>
           </div>
-
-          {/* Right Column - Background image area (no content) */}
-          {/* <div className="relative hidden lg:block" /> */}
         </div>
       </div>
     </section>

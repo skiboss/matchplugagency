@@ -15,9 +15,9 @@ export function CTASection() {
       {/* <div className="absolute inset-0 bg-black/40" /> */}
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-medium mb-6 text-white">Start Dominating</h2>
-          <p className="text-xl sm:text-2xl text-white mb-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-[#F2F3FF]">Start Dominating</h2>
+          <p className="text-xl sm:text-2xl font-normal text-white mb-8 leading-relaxed">
             The market won’t wait for you to find an edge. Deploy our 98% uptime tech stack and 
             secure your market share in 90 days.
           </p>

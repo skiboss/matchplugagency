@@ -7,7 +7,7 @@ import { DecorativeCurves } from "@/components/decorative-curves"
 import { BlogCard } from "@/components/blog-card"
 import { Button } from "@/components/ui/button"
 
-const categories = ["Hot News", "Important News", "Trending", "Blockchain", "iGaming", "American Sports", "Crypto"]
+const categories = ["Hot News", "Important News", "Trending", "IGaming", "American Sports", "Crypto", "Blockchain"]
 
 const blogPosts = [
   {
@@ -82,25 +82,34 @@ export default function NewsPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-12 md:py-18 overflow-hidden">
-          <div className="absolute inset-0 sm:mt-15 w-full h-4/6 bg-cover bg-center bg-no-repeat hidden lg:block" style={{ backgroundImage: "url('/LooperGroup.png')"}} />
-          {/* <DecorativeCurves position="top-right" /> */}
+        <section className="relative py-12 md:py-20 lg:py-24 md:mt-20 overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/blooper.png')" }}>
+          <div className="absolute inset-0 bg-white/40"></div>
 
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
-            <div className="max-w-3xl mx-auto text-center pt-8 md:pt-12">
-              <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold mb-4 md:mb-6">News</h1>
-              <p className="text-base md:text-xl font-normal text-muted-foreground px-4 md:w-3/4 mx-auto">
-                Educational content that ranks, engages, and drives conversions
-              </p>
+            <div className="flex flex-col items-center justify-center text-center">
+              <div className="max-w-2xl bg-white/35 inner-shadow-2xl rounded-4xl backdrop-blur-3xl">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold mb-4 md:mb-8 text-foreground">News</h1>
+                <p className="text-base md:text-lg font-normal text-muted-foreground md:w-5/7 mx-auto">
+                  Educational content that ranks, engages, and drives conversions
+                </p>
+              </div>
             </div>
+          </div>
+        </section>
 
-            {/* Category Filters - improved mobile scrolling */}
-            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 mt-8 md:mt-12 md:w-5/7 mx-auto px-3">
+        {/* Category Filters - improved mobile scrolling */}
+        <section className="py-4 md:py-6">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="flex flex-wrap items-center  gap-4 md:gap-8">
               <Button
                 variant={selectedCategory === null ? "default" : "outline"}
                 size="sm"
                 onClick={() => setSelectedCategory(null)}
-                className="text-sm md:text-xl font-normal rounded-full md:px-6 md:py-4 bg-black/2 outline-[#2A38FD]/8 text-secondary-foreground hover:text-primary-foreground"
+                className={`text-sm md:text-xl font-normal rounded-full md:px-7 md:py-5 ${
+                  selectedCategory === null
+                    ? "bg-primary text-white hover:bg-primary hover:text-white"
+                    : "bg-black/2 outline-[#2A38FD]/8 text-secondary-foreground hover:text-primary-foreground"
+                }`}
               >
                 All
               </Button>
@@ -110,19 +119,21 @@ export default function NewsPage() {
                   variant={selectedCategory === category ? "default" : "outline"}
                   size="sm"
                   onClick={() => setSelectedCategory(category)}
-                  className="text-sm md:text-xl font-normal rounded-full md:px-6 md:py-4 bg-black/2 outline-[#2A38FD]/8 text-secondary-foreground hover:text-primary-foreground"
+                  className={`text-sm md:text-xl font-normal rounded-full md:px-7 md:py-5 ${
+                    selectedCategory === category
+                      ? "bg-primary text-white hover:bg-primary hover:text-white"
+                      : "bg-black/2 outline-[#2A38FD]/8 text-secondary-foreground hover:text-primary-foreground"
+                  }`}
                 >
                   {category}
                 </Button>
               ))}
             </div>
           </div>
-
-          {/* <DecorativeCurves position="bottom-left" /> */}
         </section>
 
         {/* Blog Posts - Changed to 2-column grid for horizontal cards */}
-        <section className="pb-8 md:pb-12 lg:pb-20">
+        <section className="pb-8 md:pb-12 lg:pb-20 pt-4 lg:pt-6">
           <div className="container mx-auto px-4 lg:px-8">
             {filteredPosts.length > 0 ? (
               <div className="grid md:grid-cols-2 gap-4 md:gap-6">

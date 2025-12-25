@@ -53,8 +53,8 @@ export function ServicesSection() {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12 md:mb-18">
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-medium mb-4">Our Services</h2>
-          <p className="text-muted-foreground text-base md:text-2xl font-normal max-w-xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-medium mb-4 text-foreground">Our Services</h2>
+          <p className="text-muted-foreground text-base md:text-lg font-normal max-w-xl mx-auto">
             The system built to deliver 400-800% ROAS and market share in 79+ geos - licensed or not.
           </p>
         </div>
@@ -70,11 +70,11 @@ export function ServicesSection() {
                     strokeWidth={1.5}
                   />
                 </div>
-                <ArrowUpRight className="h-7 w-7 text-[#02DC3B] transition-opacity" />
+                {/* <ArrowUpRight className="h-7 w-7 text-[#02DC3B] transition-opacity" /> */}
               </div>
               <div>
-                <h3 className="font-normal text-foreground text-base md:text-2xl mb-3">{service.title}</h3>
-                <p className="text-sm md:text-lg font-light text-muted-foreground leading-relaxed">{service.description}</p>
+                <h3 className="font-medium text-foreground text-base md:text-2xl mb-3">{service.title}</h3>
+                <p className="text-sm md:text-lg font-normal text-muted-foreground leading-relaxed">{service.description}</p>
               </div>
             </div>
           ))}
@@ -85,7 +85,7 @@ export function ServicesSection() {
           <Button
             asChild
             variant="outline"
-            className="border-primary rounded-full text-base md:px-22 md:py-3 text-primary-foreground hover:bg-transparent hover:text-primary bg-primary"
+            className="border-primary rounded-full text-base md:px-6 md:py-3 text-primary-foreground hover:bg-transparent hover:text-primary bg-primary"
           >
             <Link href="/services">Explore Our Services</Link>
           </Button>
