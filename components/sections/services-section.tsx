@@ -21,7 +21,7 @@ const services = [
   },
   {
     icon: BarChart3,
-    title: "iGaming & Web3",
+    title: "IGaming & Web3 Content",
     description: "We create conversion-focused content that ranks and drives conversions.",
   },
   {

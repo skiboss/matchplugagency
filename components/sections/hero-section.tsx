@@ -43,7 +43,7 @@ export function HeroSection() {
 
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-muted-foreground font-normal max-w-xl mx-auto mb-8 md:mb-10 text-pretty">
-              We help iGaming and Web3 brands scale fast with qualified FTDs and 400-800% ROAS in every market.
+              We help iGaming and Web3 brands scale fast with qualified FTDs and 400-800% in regulated and unregulated markets.
             </p>
 
             {/* CTAs */}

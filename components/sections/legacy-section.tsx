@@ -26,7 +26,7 @@ export function OurLegacySection() {
 
         <div className="mb-8">
           <p className="text-sm md:text-2xl font-medium uppercase tracking-wider text-muted-foreground">
-            THE MATCHPLUG DIFFERENCE IN NUMBERS:
+            90-Day ROAS & Market share dominance
           </p>
         </div>
 
