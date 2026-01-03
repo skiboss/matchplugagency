@@ -1,24 +1,70 @@
+
+"use client"
 import Image from "next/image"
 
 const testimonials = [
   {
-    text: "Matchplug has been a close partner throughout these years in LATAM. thanks to his knowledge in eSports we were able to develop successful campaigns together delivering quality results.",
-    logo: "/testimonials/pinnacle-logo.png",
-    bgColor: "bg-pink-50/50",
+    title: "Rivalry Success in Europe",
+    text: "Matchplug speaks fluent Meta and google results and made us the coolest betting brand in Canada again",
+    logo: "/partners/rivalry_logo.png",
+    bgColor: "bg-orange-50/80",
   },
   {
-    text: "We've been working with Matchplug agency for a whole year now. They are highly skilled professionals in streamers, ambassadors, social media and special projects for esports. Working together is very comfortable, so we highly recommend the agency as a reliable partner.",
-    logo: "/testimonials/betano-logo.png",
+    title: "96.com Growth Metrics",
+    text: "Matchplug CPA for crypto casino users in grey markets felt like cheating.",
+    logo: "/partners/96_logo.png",
     bgColor: "bg-amber-50/50",
   },
   {
-    text: "Working with the matchplug agency we always a pleasuric experience there were proponent solutions that solve deal due to lack of skill. Working with the agency for a solutions were received by the Matchplug agency with excellent quality and speed. I cannot say anything else but recommend them to anyone who is willing to do business.",
-    logo: "/testimonials/22bet-logo.png",
+    title: "Betboro Marketing Lead",
+    text: "Hi Chris, Happy with the results and lets ramp it up with more budget and how about other geos, can we replicate same results in other geos as we just have our best month ever",
+    logo: "/partners/bet_logo.png",
     bgColor: "bg-green-50/50",
+  },
+  {
+    title: "MarketBhai",
+    text: "Matchplug 10x’d our scale and cut CPA in half by cracking hyper local vernacular acquisition for a multi-asset exchange.",
+    logo: "/partners/legacy_logo.png",
+    bgColor: "bg-blue-50/80",
+  },
+  {
+    title: "Legacy Arcade",
+    text: "Hi Chris, wanted to start by saying- you and the team have been absolutely killing it! We have been really impressed with the results and we would like to increase spend and double down on the winning ads.",
+    logo: "/partners/legacy_logo.png",
+    bgColor: "bg-purple-50/80",
+  },
+  {
+    title: "Alibabet",
+    text: "Matchplug made crypto betting acquisition feel worth building and turned awareness into explosive growth and all I would say is we need more.",
+    logo: "/partners/alibabet_logo.png",
+    bgColor: "bg-pink-50/50",
   },
 ]
 
+
+import { useRef, useEffect, useState } from "react"
+
 export function TestimonialsSection() {
+  const [current, setCurrent] = useState(0)
+  const intervalRef = useRef<NodeJS.Timeout | null>(null)
+  const visibleCount = 3
+
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % testimonials.length)
+    }, 3500)
+    return () => intervalRef.current && clearInterval(intervalRef.current)
+  }, [])
+
+  // Compute visible testimonials (carousel logic)
+  const getVisible = () => {
+    const arr = []
+    for (let i = 0; i < visibleCount; i++) {
+      arr.push(testimonials[(current + i) % testimonials.length])
+    }
+    return arr
+  }
+
   return (
     <section className="py-16 md:py-20 lg:py-24">
       <div className="container mx-auto px-4 lg:px-8">
@@ -30,12 +76,15 @@ export function TestimonialsSection() {
           </p>
         </div>
 
-        {/* Testimonial Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 mb-10 md:mb-14">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className={`p-6 md:px-6 md:py-10 border border-border rounded-2xl flex flex-col justify-between ${testimonial.bgColor}`}>
-              {/* Testimonial Text */}
-              <p className="text-foreground text-sm md:text-base font-regular tracking-wide [word-spacing:0.3rem] leading-relaxed mb-4 md:mb-20">
+        {/* Carousel */}
+        <div className="flex gap-5 md:gap-6 mb-10 md:mb-14 transition-all duration-500">
+          {getVisible().map((testimonial, index) => (
+            <div key={index} className={`flex-1 min-w-0 p-6 md:px-6 md:py-10 border border-border rounded-2xl flex flex-col justify-between ${testimonial.bgColor} shadow-sm transition-all duration-500`}>
+              <div className="flex items-center mb-3">
+                {/* <Image src={testimonial.logo} alt="Brand logo" width={44} height={44} className="h-11 w-11 object-contain rounded-full border bg-white" /> */}
+                <span className="font-semibold text-base md:text-lg text-foreground">{testimonial.title}</span>
+              </div>
+              <p className="text-foreground text-sm md:text-base font-regular tracking-wide [word-spacing:0.3rem] leading-relaxed mb-4 md:mb-20 flex-1">
                 {testimonial.text}
               </p>
 
@@ -64,7 +113,7 @@ export function TestimonialsSection() {
             <p className="text-xs md:text-lg font-normal text-muted-foreground">Delivered monthly</p>
           </div>
           <div className="text-center">
-            <p className="text-xl md:text-2xl font-medium text-foreground mb-4">90-day ROAS</p>
+            <p className="text-xl md:text-2xl font-medium text-foreground mb-4">90-day ROAS & Market share dominance</p>
             <p className="text-xs md:text-lg font-normal text-muted-foreground">Market lead map</p>
           </div>
         </div>

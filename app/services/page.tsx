@@ -1,4 +1,3 @@
-import type { Metadata } from "next"
 import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -9,12 +8,7 @@ import { Button } from "@/components/ui/button"
 import { PillarsSection } from "@/components/sections/pillars-section"
 import { OurClientsSection } from "@/components/sections/clients-section"
 import { OurLegacySection } from "@/components/sections/legacy-section"
-
-export const metadata: Metadata = {
-  title: "Services | Matchplug Agency",
-  description:
-    "Full-stack acquisition solutions for iGaming and Web3 brands. Meta Ads, Google Ads, Bing, Taboola, Crypto Marketing, and more.",
-}
+import { MatchplugDoes } from "@/components/sections/matchplug-does"
 
 const differentiators = [
   {
@@ -79,7 +73,7 @@ export default function ServicesPage() {
 
         {/* What Most Agencies Do */}
         <section className="py-12 md:py-20 lg:py-32">
-          <div className="container mx-auto px-4 bg-red-700 md:px-0">
+          <div className="container mx-auto px-4 md:px-0">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-8 md:mb-12 max-w-4xl mx-auto">
               {/* Content */}
               <div className="">
@@ -98,7 +92,7 @@ export default function ServicesPage() {
               </div>
             </div>
             {/* Image */}
-            <div className="relative w-full h-64 sm:h-80 md:h-91 overflow-hidden bg-amber-400" style={{ borderRadius: "0.75rem" }}>
+            <div className="relative w-full h-64 sm:h-80 md:h-91 overflow-hidden" style={{ borderRadius: "0.75rem" }}>
               <Image
                 src="/most_agy.png"
                 alt="What most agencies do"
@@ -112,13 +106,17 @@ export default function ServicesPage() {
           </div>
         </section>
 
+
+        {/* Matchplug Does */}
+        <MatchplugDoes />
+
         {/* Our Legacy  */}
         <OurLegacySection />
 
         {/* Who We Work Best With */}
         <section className="py-12 md:py-20 lg:py-32">
           <div className="container mx-auto px-0">
-            <div className="flex flex-col items-center justify-center text-center mb-4">
+            <div className="flex flex-col items-center justify-center text-center mb-0">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight text-foreground mb-4">
                 Who We Work Best With
               </h2>

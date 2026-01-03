@@ -7,36 +7,36 @@ const mp_does = [
     title: "Go aggressive",
     description:
       "We push campaigns to the edge of what’s possible to maximize volume",
-    image: "/market_share.png",
+    image: "/services/aggressive.png",
   },
   {
     title: "Creative Diversity",
     description: "We provide the right creatives required to convert saving clients energy and time.",
-    image: "/survival.png",
+    image: "/services/diversity.png",
   },
   {
     title: "Stay live",
     description:
       "Proprietary technology keeps campaigns running 98% of the time",
-    image: "/performance.png",
+    image: "/services/live.png",
   },
   {
     title: "Geo specialization",
     description:
       "Every campaign is localized for maximum resonance",
-    image: "/geo_mastery.png",
+    image: "/services/geo.png",
   },
   {
     title: "Measure what matters",
     description:
       "And that is FTDs and market share, period",
-    image: "/geo_mastery.png",
+    image: "/services/measure.png",
   },
   {
     title: "Take accountability",
     description:
       "Performance-based fees align our incentives with yours",
-    image: "/geo_mastery.png",
+    image: "/services/accountability.png",
   },
 ]
 

@@ -1,4 +1,3 @@
-import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { Header } from "@/components/header"
@@ -7,11 +6,6 @@ import { CTASection } from "@/components/sections/cta-section"
 import { DecorativeCurves } from "@/components/decorative-curves"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
-
-export const metadata: Metadata = {
-  title: "Who We Are | Matchplug Agency",
-  description: "Matchplug Agency is the acquisition partner for iGaming and Web3 brands that refuse to play small.",
-}
 
 const differentiators = [
   {

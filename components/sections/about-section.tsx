@@ -39,7 +39,7 @@ export function AboutSection() {
               <div className="mb-8">
                 <p className="text-base md:text-xl font-light text-foreground mb-3">
                   While other agencies waste your budget testing random tactics hoping something works, We
-use our layered data and cross -client intelligence network that other agencies can’t match to
+use our layered data and cross - client intelligence network that other agencies can’t match to
 optimise for dominance. We don't help you participate in markets —
                   <span className="text-lg md:text-2xl font-medium text-[#02DC3B]"> we help you own them.</span>
                 </p>
