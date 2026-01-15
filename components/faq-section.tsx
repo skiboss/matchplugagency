@@ -32,20 +32,20 @@ export function FAQSection() {
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-3 md:space-y-8">
+          <Accordion type="single" collapsible className="space-y-3 md:space-y-6">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="rounded-[20px] border-2 px-4 md:px-6"
+                className="rounded-[20px] border px-4 md:px-6"
                 style={{
-                  borderColor: "transparent",
-                  background: "linear-gradient(135deg, rgba(255,255,255,0.24), rgba(255,255,255,0.08)), linear-gradient(90deg, #475CBC -4.04%, #34A853 105.66%)",
-                  backgroundClip: "padding-box, border-box",
-                  backgroundOrigin: "padding-box, border-box",
+                  border: "0px solid",
+                  borderImageSource: "linear-gradient(90deg, #475CBC -4.04%, #34A853 105.66%)",
+                  borderImageSlice: 1,
+                  background: "linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.08) 100%)",
                 }}
               >
-                <AccordionTrigger className="text-left hover:no-underline py-4 md:py-5 gap-4 text-white">
+                <AccordionTrigger className="text-left hover:no-underline py-4 md:py-5 gap-4 text-white [&_svg]:w-6 [&_svg]:h-6 md:[&_svg]:w-8 md:[&_svg]:h-8">
                   <span className="font-normal text-sm md:text-2xl pr-4">{faq.question}</span>
                 </AccordionTrigger>
                 <AccordionContent className="text-dark-section-foreground/70 pb-4 md:pb-5 text-sm md:text-2xl">

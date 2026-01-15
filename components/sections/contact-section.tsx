@@ -55,17 +55,17 @@ export function ContactSection({ showBorder = true }: ContactSectionProps) {
                   {/* Direct Contact Info */}
                   <div className="mt-6 space-y-3">
                     <div className="flex items-center gap-2">
-                      <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={20} height={20} className="h-5 w-5" />
+                      {/* <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={20} height={20} className="h-5 w-5" /> */}
                       <span className="font-medium text-foreground text-xs md:text-base">WhatsApp:</span>
                       <a href="https://api.whatsapp.com/send?phone=13072185698" className="text-primary underline text-xs md:text-base" target="_blank" rel="noopener noreferrer">+1 (307) 218-5698</a>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Image src="/icons/telegram.svg" alt="Telegram" width={20} height={20} className="h-5 w-5" />
+                      {/* <Image src="/icons/telegram.svg" alt="Telegram" width={20} height={20} className="h-5 w-5" /> */}
                       <span className="font-medium text-foreground text-xs md:text-base">Telegram:</span>
                       <a href="https://telegram.me/@matchplugvip" className="text-primary underline text-xs md:text-base" target="_blank" rel="noopener noreferrer">@matchplugvip</a>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Image src="/icons/mail.svg" alt="Email" width={20} height={20} className="h-5 w-5" />
+                      {/* <Image src="/icons/mail.svg" alt="Email" width={20} height={20} className="h-5 w-5" /> */}
                       <span className="font-medium text-foreground text-xs md:text-base">Email:</span>
                       <a href="mailto:hello@matchplugagency.com" className="text-primary underline text-xs md:text-base">hello@matchplugagency.com</a>
                     </div>

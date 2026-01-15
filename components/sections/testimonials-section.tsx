@@ -53,7 +53,9 @@ export function TestimonialsSection() {
     intervalRef.current = setInterval(() => {
       setCurrent((prev) => (prev + 1) % testimonials.length)
     }, 3500)
-    return () => intervalRef.current && clearInterval(intervalRef.current)
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current)
+    }
   }, [])
 
   // Compute visible testimonials (carousel logic)

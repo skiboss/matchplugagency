@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: "Stay updated with the latest trends, insights, and strategies in iGaming and crypto advertising.",
 }
 
-export default function NewsLayout({
+export default function NewsLayout({ 
   children,
 }: {
   children: React.ReactNode
