@@ -1,7 +1,10 @@
+"use client"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowUpRight, TrendingUp, Search, Rocket, BarChart3, Radio, Target, Gem, Truck } from "lucide-react"
 import { PillarsSection } from "./pillars-section"
+import { usePathname } from "next/navigation"
 
 const services = [
   {
@@ -48,6 +51,9 @@ const services = [
 ]
 
 export function ServicesSection() {
+  const pathname = usePathname()
+  const isServicesPage = pathname === "/services"
+
   return (
     <section className="py-16 md:py-20 lg:py-24">
       <div className="container mx-auto px-4 lg:px-8">
@@ -77,16 +83,18 @@ export function ServicesSection() {
           ))}
         </div>
 
-        {/* CTA Button */}
-        <div className="text-center">
-          <Button
-            asChild
-            variant="outline"
-            className="border-primary rounded-full text-base md:px-6 md:py-3 text-primary-foreground hover:bg-transparent hover:text-primary bg-primary"
-          >
-            <Link href="/services">Explore Our Services</Link>
-          </Button>
-        </div>
+        {/* CTA Button - Hidden on services page */}
+        {!isServicesPage && (
+          <div className="text-center">
+            <Button
+              asChild
+              variant="outline"
+              className="border-primary rounded-full text-base md:px-6 md:py-3 text-primary-foreground hover:bg-transparent hover:text-primary bg-primary"
+            >
+              <Link href="/services">Explore Our Services</Link>
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   )
