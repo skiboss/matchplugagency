@@ -62,15 +62,12 @@ export function ServicesSection() {
         {/* Services Grid - 4 columns on desktop, 2 on tablet, 1 on mobile */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mb-10 md:mb-12">
           {services.map((service, index) => (
-            <div key={index} className="group text-left space-y-4">
-              <div className="flex items-start justify-between mb-14">
-                <div className="flex items-center justify-center">
-                  <service.icon
-                    className="h-8 w-8 text-muted-foreground group-hover:text-primary transition-colors"
-                    strokeWidth={1.5}
-                  />
-                </div>
-                {/* <ArrowUpRight className="h-7 w-7 text-[#02DC3B] transition-opacity" /> */}
+            <div key={index} className="group sm:text-left text-center space-y-4">
+              <div className="flex items-center justify-center sm:justify-start mb-14">
+                <service.icon
+                  className="h-8 w-8 text-muted-foreground group-hover:text-primary transition-colors"
+                  strokeWidth={1.5}
+                />
               </div>
               <div>
                 <h3 className="font-medium text-foreground text-base md:text-2xl mb-3">{service.title}</h3>

@@ -1,15 +1,15 @@
+import dynamic from "next/dynamic"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { HeroSection } from "@/components/sections/hero-section"
+import { Trustbar } from "@/components/sections/trustbar"
 import { AboutSection } from "@/components/sections/about-section"
 import { ServicesSection } from "@/components/sections/services-section"
 import { PillarsSection } from "@/components/sections/pillars-section"
 import { TestimonialsSection } from "@/components/sections/testimonials-section"
+import { NewsCarousel } from "@/components/sections/news-carousel"
 import { HomeContactSection } from "@/components/sections/home-contact-section"
 import { FAQSection } from "@/components/faq-section"
-import { Trustbar } from "@/components/sections/trustbar"
-import { NewsCarousel } from "@/components/sections/news-carousel"
-import { getWordPressPosts } from "@/lib/wordpress"
 
 interface WordPressPost {
   id: number
@@ -69,7 +69,7 @@ export default async function HomePage() {
         <ServicesSection />
         <PillarsSection />
         <TestimonialsSection />
-        {carouselPosts.length > 0 && <NewsCarousel posts={carouselPosts} />}
+        {/*carouselPosts.length > 0 && <NewsCarousel posts={carouselPosts} />*/}
         <HomeContactSection />
         <FAQSection />
         

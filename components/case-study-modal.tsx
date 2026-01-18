@@ -124,17 +124,12 @@ export function CaseStudyModal({ study, isOpen, onClose }: CaseStudyModalProps) 
           </div>
 
           {/* Footer */}
-          <div className="flex items-center justify-between pt-4 border-t border-border flex-wrap gap-2">
-            <div className="flex items-center gap-2 flex-wrap">
-              {study.tags.map((tag) => (
-                <Badge key={tag} variant="outline">
-                  #{tag}
-                </Badge>
-              ))}
-            </div>
-            <div className="text-sm text-muted-foreground">
-              Timeline: <span className="font-semibold text-foreground">{study.timeline}</span>
-            </div>
+          <div className="flex items-center gap-2 flex-wrap pt-4 border-t border-border">
+            {study.tags.map((tag) => (
+              <Badge key={tag} variant="outline">
+                #{tag}
+              </Badge>
+            ))}
           </div>
         </div>
       </div>

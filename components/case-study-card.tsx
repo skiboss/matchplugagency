@@ -72,17 +72,14 @@ export function CaseStudyCard({ study, onViewCaseStudy }: CaseStudyCardProps) {
         ))}
       </div>
 
-      {/* Tags and Timeline */}
-      <div className="flex items-center justify-between mt-2">
-        <div className="flex items-center gap-2 pl-2 flex-wrap">
-          {study.tags.map((tag, index) => (
-            <span key={tag} className="text-xs font-normal text-muted-foreground">
-              #{tag}
-              {index < study.tags.length - 1 && <span className="ml-1.5">·</span>}
-            </span>
-          ))}
-        </div>
-        <span className="text-xs md:text-sm font-normal text-foreground">Timeline: {study.timeline}</span>
+      {/* Tags */}
+      <div className="flex items-center gap-2 pl-2 flex-wrap mt-2">
+        {study.tags.map((tag, index) => (
+          <span key={tag} className="text-xs font-normal text-muted-foreground">
+            #{tag}
+            {index < study.tags.length - 1 && <span className="ml-1.5">·</span>}
+          </span>
+        ))}
       </div>
 
       {/* View Case Study Button */}

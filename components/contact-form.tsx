@@ -5,6 +5,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Loader2, ChevronDown } from "lucide-react"
+import { useToast } from "@/hooks/use-toast"
 
 const companyTypes = [
   "iGaming Operator",
@@ -43,20 +44,70 @@ export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [selectedCountry, setSelectedCountry] = useState(countries[0])
+  const { toast } = useToast()
+
+  // Form state
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    countryCode: countries[0].code,
+    phone: '',
+    message: '',
+  })
 
   const handleCountryChange = (countryCode: string) => {
     const country = countries.find(c => c.code === countryCode)
     if (country) {
       setSelectedCountry(country)
+      setFormData(prev => ({ ...prev, countryCode }))
     }
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target
+    setFormData(prev => ({ ...prev, [name]: value }))
+  }
+
+  const handleCompanyChange = (value: string) => {
+    setFormData(prev => ({ ...prev, company: value }))
   }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-    setIsSubmitting(false)
-    setSubmitted(true)
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        const error = await response.json()
+        throw new Error(error.error || 'Failed to send message')
+      }
+
+      setSubmitted(true)
+      toast({
+        title: 'Success!',
+        description: 'Your inquiry has been sent. We\'ll get back to you within 24 hours.',
+        duration: 5000,
+      })
+    } catch (error) {
+      console.error('Form submission error:', error)
+      toast({
+        title: 'Error',
+        description: error instanceof Error ? error.message : 'Failed to send message. Please try again.',
+        variant: 'destructive',
+        duration: 5000,
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (submitted) {
@@ -79,7 +130,10 @@ export function ContactForm() {
       <div className="relative">
         <input
           type="text"
+          name="name"
           placeholder="Name"
+          value={formData.name}
+          onChange={handleInputChange}
           required
           className="w-full md:text-lg bg-transparent border-0 border-b-2 border-muted-foreground/30 focus:border-primary px-0 py-3 text-muted-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-0 transition-colors"
         />
@@ -89,7 +143,10 @@ export function ContactForm() {
       <div className="relative">
         <input
           type="email"
+          name="email"
           placeholder="Email"
+          value={formData.email}
+          onChange={handleInputChange}
           required
           className="w-full md:text-lg bg-transparent border-0 border-b-2 border-muted-foreground/30 focus:border-primary px-0 py-3 text-muted-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-0 transition-colors"
         />
@@ -97,7 +154,7 @@ export function ContactForm() {
 
       {/* Company Type Select - underline style */}
       <div className="relative">
-        <Select required>
+        <Select value={formData.company} onValueChange={handleCompanyChange} required>
           <SelectTrigger className="w-full bg-transparent border-0 border-b-2 border-muted-foreground/30 focus:border-primary rounded-none px-0 py-3 h-auto focus:ring-0 focus:ring-offset-0 [&>svg]:hidden">
             <div className="flex items-center justify-between w-full md:text-lg">
               <SelectValue placeholder="Company" />
@@ -106,7 +163,7 @@ export function ContactForm() {
           </SelectTrigger>
           <SelectContent>
             {companyTypes.map((type) => (
-              <SelectItem key={type} value={type.toLowerCase().replace(/\s+/g, "-")}>
+              <SelectItem key={type} value={type}>
                 {type}
               </SelectItem>
             ))}
@@ -116,7 +173,7 @@ export function ContactForm() {
 
       {/* Phone Input with country code selector */}
       <div className="relative flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 border-b-2 border-muted-foreground/30 focus-within:border-primary transition-colors">
-        <Select onValueChange={handleCountryChange} defaultValue={selectedCountry.code}>
+        <Select value={formData.countryCode} onValueChange={handleCountryChange}>
           <SelectTrigger className="w-auto bg-transparent border-0 rounded-none px-0 py-3 h-auto focus:ring-0 focus:ring-offset-0 [&>svg]:hidden shrink-0">
             <div className="flex items-center gap-2 min-w-0">
               <span className="text-xl">{selectedCountry.flag}</span>
@@ -138,7 +195,11 @@ export function ContactForm() {
         </Select>
         <input
           type="tel"
+          name="phone"
           placeholder="Phone number"
+          value={formData.phone}
+          onChange={handleInputChange}
+          required
           className="flex-1 bg-transparent border-0 px-0 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-0 min-w-0 md:text-lg"
         />
         <span className="text-xs md:text-base text-muted-foreground text-right sm:text-left">( whatsapp/telegram )</span>
@@ -147,7 +208,10 @@ export function ContactForm() {
       {/* Message Textarea */}
       <div className="relative">
         <textarea
+          name="message"
           placeholder="Add brief message"
+          value={formData.message}
+          onChange={handleInputChange}
           rows={1}
           className="w-full bg-transparent md:text-lg border-0 border-b-2 border-muted-foreground/30 focus:border-primary px-0 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-0 transition-colors resize-none"
         />
@@ -160,7 +224,7 @@ export function ContactForm() {
             Sending...
           </>
         ) : (
-          "Book Strategy Call"
+          "Send Inquiry"
         )}
       </Button>
     </form>

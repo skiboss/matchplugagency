@@ -46,8 +46,19 @@ import { useRef, useEffect, useState } from "react"
 
 export function TestimonialsSection() {
   const [current, setCurrent] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
-  const visibleCount = 3
+  const visibleCount = isMobile ? 1 : 3
+
+  useEffect(() => {
+    // Check if mobile on mount and on resize
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768) // md breakpoint
+    }
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
 
   useEffect(() => {
     intervalRef.current = setInterval(() => {

@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -24,7 +25,14 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <div className="flex items-center">
-            <img src="/mp_logo.png" alt="Matchplug Agency" className="h-8" />
+            <Image 
+              src="/mp_logo.png" 
+              alt="Matchplug Agency" 
+              width={32}
+              height={32}
+              priority
+              className="h-8 w-auto"
+            />
           </div>
         </Link>
 

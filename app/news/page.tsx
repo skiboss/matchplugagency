@@ -46,7 +46,9 @@ async function getWordPressCategories(): Promise<WordPressCategory[]> {
   try {
     const response = await fetch(
       "https://matchplugagency.com/blog/wp-json/wp/v2/categories?per_page=100",
-      { cache: "no-store" }
+      { 
+        next: { revalidate: 3600 } // Cache for 1 hour
+      }
     )
     if (!response.ok) return []
     const allCategories = await response.json()

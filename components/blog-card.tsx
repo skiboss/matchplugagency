@@ -46,6 +46,8 @@ export function BlogCard({ post }: BlogCardProps) {
             alt={cleanTitle}
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-105 md:rounded-tl-2xl md:rounded-tr-2xl"
+            loading="lazy"
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 192px, 232px"
           />
         </div>
 

@@ -102,8 +102,13 @@ export function InactivityModal() {
           </div>
 
           <div className="flex justify-center sm:justify-start">
-            <Button asChild size="lg" className="bg-[#39FF14] hover:bg-[#32E612] text-black font-bold px-6">
-              <Link href="/contact">
+            <Button
+              asChild
+              size="lg"
+              className="bg-[#39FF14] hover:bg-[#32E612] text-black font-bold px-6"
+              onClick={handleClose}
+            >
+              <Link href="https://calendly.com/chris-ojukoko-jnr/30min?" target="_blank">
                 Book It
                 <Calendar className="ml-2 h-5 w-5" />
               </Link>

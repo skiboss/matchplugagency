@@ -39,7 +39,7 @@ export function MobileBottomCTA() {
         </div>
         <div className="flex items-center gap-2 shrink-0">
           <Button asChild size="sm" className="bg-[#1a1a2e] hover:bg-[#1a1a2e]/90 text-white text-xs px-3 h-8">
-            <Link href="/contact">
+            <Link href="https://calendly.com/chris-ojukoko-jnr/30min?" target="_blank">
               Book Now
               <ArrowRight className="ml-1 h-3 w-3" />
             </Link>

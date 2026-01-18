@@ -50,7 +50,7 @@ export default function AboutPage() {
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button size="lg" asChild className="group text-base font-medium rounded-full md:py-4 md:px-11">
-                    <Link href="/contact">
+                    <Link href="https://calendly.com/chris-ojukoko-jnr/30min?" target="_blank">
                       Book Strategy Call
                     </Link>
                   </Button>

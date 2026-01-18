@@ -36,12 +36,16 @@ export async function getWordPressPosts(): Promise<WordPressPost[]> {
   try {
     const url = `${WORDPRESS_API_URL}/wp-json/wp/v2/posts?_embed&per_page=100`
 
+    const controller = new AbortController()
+    const timeout = setTimeout(() => controller.abort(), 10000) // 10 second timeout
+
     const response = await fetch(url, {
       // ISR: Revalidate every 1 hour (3600 seconds)
       next: { revalidate: REVALIDATION_TIME },
-      // Add timeout to prevent hanging requests
-      signal: AbortSignal.timeout(10000),
+      signal: controller.signal,
     })
+
+    clearTimeout(timeout)
 
     if (!response.ok) {
       console.error(`WordPress API error: ${response.status} ${response.statusText}`)

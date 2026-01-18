@@ -11,10 +11,10 @@ const clientLogos = [
   { name: "Betano", color: "/partners/betano_logo.png", white: "/partners/logo-white/Betano.png" },
   { name: "1XBET", color: "/partners/1XBET_logo.png", white: "/partners/logo-white/1XB.png" },
   { name: "BC Game", color: "/partners/bc_logo.png", white: "/partners/logo-white/BCG.png" },
-  { name: "22bet", color: "/partners/22bet_logo.png", white: null },
-  { name: "96", color: "/partners/96_logo.png", white: null },
-  { name: "Alibabet", color: "/partners/alibabet_logo.png", white: null },
-  { name: "Rivalry", color: "/partners/rivalry_logo.png", white: null },
+  { name: "22bet", color: "/partners/22bet_logo.png", white: "/partners/logo-white/22bet.png" },
+  { name: "96", color: "/partners/96_logo.png", white: "/partners/logo-white/96_logo.png" },
+  { name: "Alibabet", color: "/partners/alibabet_logo.png", white: "/partners/logo-white/alibabet.png" },
+  { name: "Rivalry", color: "/partners/rivalry_logo.png", white: "/partners/logo-white/rivalry.png" },
 ]
 
 export function Trustbar() {

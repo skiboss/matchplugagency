@@ -20,7 +20,7 @@ const clientLogos = [
 export function HeroSection() {
   return (
     <section 
-      className="relative py-12 md:py-20 lg:py-28 overflow-hidden bg-white"
+      className="relative pt-20 pb-12 sm:py-12 md:py-20 lg:py-28 overflow-hidden bg-white"
       style={{
         backgroundImage: "url('/home_hero.png')",
         backgroundPosition: "center",
@@ -53,7 +53,7 @@ export function HeroSection() {
                 asChild
                 className="group text-base font-medium rounded-full px-8 md:px-10 py-3 md:py-4"
               >
-                <Link href="/contact">
+                <Link href="https://calendly.com/chris-ojukoko-jnr/30min?" target="_blank">
                   Book Strategy Call
                 </Link>
               </Button>
