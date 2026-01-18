@@ -31,7 +31,7 @@ export default function AboutPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section - matches Apage design */}
-        <section className="relative py-12 md:py-20 lg:py-32 overflow-hidden">
+        <section className="relative pt-20 pb-12 sm:py-12 md:py-20 lg:py-32 overflow-hidden">
           <div className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/about_hero.png')" }} />
           {/* <div className="absolute inset-0 bg-white/90"></div> */}
 

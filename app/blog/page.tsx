@@ -13,7 +13,7 @@ export default async function BlogPage() {
   const posts = await getWordPressPosts()
 
   return (
-    <main className="min-h-screen bg-background py-12 px-4 sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-background pt-20 pb-12 sm:py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="mb-12 text-center">

@@ -145,7 +145,7 @@ export default function NewsPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-12 md:py-20 lg:py-24 md:mt-20 overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/blooper.png')" }}>
+        <section className="relative pt-20 pb-12 sm:py-12 md:py-20 lg:py-24 overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/blooper.png')" }}>
           <div className="absolute inset-0 bg-white/40"></div>
 
           <div className="container mx-auto px-4 lg:px-8 relative z-10">

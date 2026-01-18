@@ -34,7 +34,7 @@ export default function ServicesPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-12 md:py-20 lg:py-32 overflow-hidden">
+        <section className="relative pt-20 pb-12 sm:py-12 md:py-20 lg:py-32 overflow-hidden">
                             <div className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/about_hero.png')" }} />
 
           <div className="container mx-auto px-4 lg:px-8 relative z-10">

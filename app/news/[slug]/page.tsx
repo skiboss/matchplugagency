@@ -63,9 +63,9 @@ export default async function NewsPostPage({ params }: { params: { slug: string 
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pt-20 sm:pt-0\">
         {/* Navigation Buttons */}
-        <div className="sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border md:mt-20">
+        <div className="sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border\">
           <div className="max-w-5xl mx-auto px-4 lg:px-8 py-4">
             <div className="flex items-center justify-between gap-4">
               <Link href="/news">
