@@ -13,8 +13,8 @@ const clientLogos = [
   { name: "BC Game", color: "/partners/bc_logo.png", white: "/partners/logo-white/BCG.png" },
   { name: "22bet", color: "/partners/22bet_logo.png", white: "/partners/logo-white/22bet.png" },
   { name: "96", color: "/partners/96_logo.png", white: "/partners/logo-white/96_logo.png" },
-  { name: "Alibabet", color: "/partners/alibabet_logo.png", white: "/partners/logo-white/alibabet.png" },
-  { name: "Rivalry", color: "/partners/rivalry_logo.png", white: "/partners/logo-white/rivalry.png" },
+  { name: "Alibabet", color: "/partners/alibabet_logo.png", white: "/partners/logo-white/Alibabet.png" },
+  { name: "Rivalry", color: "/partners/rivalry_logo.png", white: "/partners/logo-white/Rivalry.png" },
 ]
 
 export function Trustbar() {
