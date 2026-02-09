@@ -15,6 +15,7 @@ const clientLogos = [
   { name: "96", color: "/partners/96_logo.png", white: "/partners/logo-white/96_logo.png" },
   { name: "Alibabet", color: "/partners/alibabet_logo.png", white: "/partners/logo-white/Alibabet.png" },
   { name: "Rivalry", color: "/partners/rivalry_logo.png", white: "/partners/logo-white/Rivalry.png" },
+  { name: "MarketBhai", color: "/partners/MarketBhaiB.png", white: "/partners/logo-white/MarketBhaiW.png" },
 ]
 
 export function Trustbar() {

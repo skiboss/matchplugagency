@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
@@ -19,9 +19,16 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
 
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? "hidden" : ""
+    return () => {
+      document.body.style.overflow = ""
+    }
+  }, [mobileMenuOpen])
+
   return (
-    <header className="fixed top-0 mb-8 z-50 w-full bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60 border-b border-border">
-      <nav className="container mx-auto flex items-center justify-between px-4 py-4 lg:px-8">
+    <header className="fixed top-0 mb-8 z-50 w-full bg-background border-b border-border">
+      <nav className="container mx-auto flex items-center justify-between px-4 py-4 lg:px-8 relative z-50">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <div className="flex items-center">
@@ -69,28 +76,35 @@ export function Header() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-border bg-background">
-          <div className="container mx-auto px-4 py-4 space-y-4">
-            {navigation.map((item) => {
-              const isActive = pathname === item.href
-              return (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={`block text-sm font-medium transition-colors ${
-                    isActive ? "text-muted-foreground" : "text-foreground hover:text-muted-foreground"
-                  }`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              )
-            })}
-            <Button asChild className="w-full rounded-full">
-              <Link href="/contact">Contact Us</Link>
-            </Button>
+        <>
+          <div
+            className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm lg:hidden"
+            aria-hidden="true"
+            onClick={() => setMobileMenuOpen(false)}
+          />
+          <div className="lg:hidden border-t border-border bg-background relative z-50">
+            <div className="container mx-auto px-4 py-4 space-y-4">
+              {navigation.map((item) => {
+                const isActive = pathname === item.href
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={`block text-sm font-medium transition-colors ${
+                      isActive ? "text-muted-foreground" : "text-foreground hover:text-muted-foreground"
+                    }`}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )
+              })}
+              <Button asChild className="w-full rounded-full">
+                <Link href="/contact">Contact Us</Link>
+              </Button>
+            </div>
           </div>
-        </div>
+        </>
       )}
     </header>
   )

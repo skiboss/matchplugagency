@@ -93,7 +93,7 @@ const caseStudies = [
     category: "Multi Asset Trading",
     title: "MarketBhai.com – Hyper-Local Conquest of Multi Asset Trading Market",
     client: "MarketBhai.com",
-    brandLogo: "/partners/legacy_logo.png",
+    brandLogo: "/partners/MarketBhaiB.png",
     industry: "Trading Platform",
     objective: "Slash CPA from ₹220–280 to sub–₹120 while 5x-ing active trading accounts in Tier-2/3",
     challenge: "High competition from Zerodha, Grow, and Binance; creative fatigue during low-volatility periods; vernacular targeting gaps in semi-urban areas.",

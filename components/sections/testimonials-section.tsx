@@ -24,7 +24,7 @@ const testimonials = [
   {
     title: "MarketBhai",
     text: "Matchplug 10x’d our scale and cut CPA in half by cracking hyper local vernacular acquisition for a multi-asset exchange.",
-    logo: "/partners/legacy_logo.png",
+    logo: "/partners/MarketBhaiB.png",
     bgColor: "bg-blue-50/80",
   },
   {
@@ -102,13 +102,13 @@ export function TestimonialsSection() {
               </p>
 
               {/* Brand Logo */}
-              <div>
+              <div className="flex items-center">
                 <Image
                   src={testimonial.logo}
                   alt="Brand logo"
                   width={100}
                   height={40}
-                  className="h-11 min-w-32 w-auto object-cover"
+                  className="h-11 min-w-32 w-auto object-contain"
                 />
               </div>
             </div>

@@ -10,6 +10,7 @@ const clients = [
   { name: "22bet", logo: "/partners/22bet_logo.png" },
   { name: "Legacy", logo: "/partners/legacy_logo.png" },
   { name: "Gwalabet", logo: "/partners/gwalabet_logo.png" },
+  { name: "MarketBhai", logo: "/partners/MarketBhaiB.png" },
 ]
 
 export function OurClientsSection() {
