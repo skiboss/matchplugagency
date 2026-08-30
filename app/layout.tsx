@@ -67,9 +67,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body className={`font-sans antialiased`}>
-        <PageLoader />
+        {/* <PageLoader /> */}
         {children}
-        <MobileBottomCTA />
+        {/* <MobileBottomCTA /> */}
         <InactivityModal />
         <Analytics />
       </body>
