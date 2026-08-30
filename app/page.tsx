@@ -2,7 +2,7 @@ import dynamic from "next/dynamic"
 // import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { HeroSection } from "@/components/sections/hero-section"
-// import { Trustbar } from "@/components/sections/trustbar"
+import { Trustbar } from "@/components/sections/trustbar"
 import { AboutSection } from "@/components/sections/about-section"
 import { ServicesSection } from "@/components/sections/services-section"
 import { PillarsSection } from "@/components/sections/pillars-section"
@@ -64,7 +64,7 @@ export default async function HomePage() {
       {/* <Header /> */}
       <main className="flex-1">
         <HeroSection />
-        {/* <Trustbar /> */}
+        <Trustbar />
         <AboutSection />
         <ServicesSection />
         <PillarsSection />
