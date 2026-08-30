@@ -178,10 +178,10 @@ export default function PortfolioPage() {
     activeFilter === "All"
       ? caseStudies
       : caseStudies.filter(
-          (study) =>
-            study.tags.some((tag) => tag.toLowerCase().includes(activeFilter.toLowerCase())) ||
-            study.industry.toLowerCase().includes(activeFilter.toLowerCase()),
-        )
+        (study) =>
+          study.tags.some((tag) => tag.toLowerCase().includes(activeFilter.toLowerCase())) ||
+          study.industry.toLowerCase().includes(activeFilter.toLowerCase()),
+      )
 
   const handleViewCaseStudy = (study: (typeof caseStudies)[0]) => {
     setSelectedStudy(study)
@@ -190,7 +190,7 @@ export default function PortfolioPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      {/* <Header /> */}
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative pt-20 pb-12 sm:py-12 md:py-20 lg:py-24 overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/blooper.png')" }}>
@@ -216,11 +216,10 @@ export default function PortfolioPage() {
                 <button
                   key={tab}
                   onClick={() => setActiveFilter(tab)}
-                  className={`px-5 py-2 rounded-full cursor-pointer text-sm md:text-xl font-medium transition-colors ${
-                    activeFilter === tab
+                  className={`px-5 py-2 rounded-full cursor-pointer text-sm md:text-xl font-medium transition-colors ${activeFilter === tab
                       ? "bg-primary text-primary-foreground hover:bg-primary hover:text-white"
                       : "bg-black/2 text-foreground outline outline-[#2A38FD]/8 hover:bg-secondary/50"
-                  } border border-border`}
+                    } border border-border`}
                 >
                   {tab}
                 </button>

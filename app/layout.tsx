@@ -3,16 +3,16 @@ import type { Metadata, Viewport } from "next"
 import { Inter, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { PageLoader } from "@/components/page-loader"
-// import { MobileBottomCTA } from "@/components/mobile-bottom-cta"
+import { MobileBottomCTA } from "@/components/mobile-bottom-cta"
 // import { InactivityModal } from "@/components/inactivity-modal"
 import "./globals.css"
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   preload: true,
 })
-const _geistMono = Geist_Mono({ 
+const _geistMono = Geist_Mono({
   subsets: ["latin"],
   display: "swap",
   preload: true,
@@ -69,7 +69,7 @@ export default function RootLayout({
       <body className={`font-sans antialiased`}>
         <PageLoader />
         {children}
-        {/* <MobileBottomCTA /> */}
+        <MobileBottomCTA />
         {/* <InactivityModal /> */}
         {/* <Analytics /> */}
       </body>
