@@ -71,7 +71,7 @@ export default function RootLayout({
         {children}
         {/* <MobileBottomCTA /> */}
         {/* <InactivityModal /> */}
-        <Analytics />
+        {/* <Analytics /> */}
       </body>
     </html>
   )
