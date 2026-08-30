@@ -1,37 +1,37 @@
 import dynamic from "next/dynamic"
 // import { Header } from "@/components/header"
-// import { Footer } from "@/components/footer"
+import { Footer } from "@/components/footer"
 // import { HeroSection } from "@/components/sections/hero-section"
 // import { Trustbar } from "@/components/sections/trustbar"
-// import { AboutSection } from "@/components/sections/about-section"
+import { AboutSection } from "@/components/sections/about-section"
 // import { ServicesSection } from "@/components/sections/services-section"
 import { PillarsSection } from "@/components/sections/pillars-section"
 // import { TestimonialsSection } from "@/components/sections/testimonials-section"
 // import { NewsCarousel } from "@/components/sections/news-carousel"
 // import { HomeContactSection } from "@/components/sections/home-contact-section"
-// import { FAQSection } from "@/components/faq-section"
+import { FAQSection } from "@/components/faq-section"
 
-interface WordPressPost {
-  id: number
-  title: {
-    rendered: string
-  }
-  excerpt: {
-    rendered: string
-  }
-  content: {
-    rendered: string
-  }
-  date: string
-  featured_media: number
-  slug: string
-  _embedded?: {
-    "wp:featuredmedia": Array<{
-      source_url: string
-      alt_text: string
-    }>
-  }
-}
+// interface WordPressPost {
+//   id: number
+//   title: {
+//     rendered: string
+//   }
+//   excerpt: {
+//     rendered: string
+//   }
+//   content: {
+//     rendered: string
+//   }
+//   date: string
+//   featured_media: number
+//   slug: string
+//   _embedded?: {
+//     "wp:featuredmedia": Array<{
+//       source_url: string
+//       alt_text: string
+//     }>
+//   }
+// }
 
 export default async function HomePage() {
   // Fetch WordPress posts for carousel
@@ -63,18 +63,18 @@ export default async function HomePage() {
     <div className="min-h-screen flex flex-col">
       {/* <Header /> */}
       <main className="flex-1">
-        {/* <HeroSection />
-        <Trustbar />
+        {/* <HeroSection /> */}
+        {/* <Trustbar /> */}
         <AboutSection />
-        <ServicesSection /> */}
+        {/* <ServicesSection /> */}
         <PillarsSection />
         {/* <TestimonialsSection /> */}
         {/*carouselPosts.length > 0 && <NewsCarousel posts={carouselPosts} />*/}
         {/* <HomeContactSection /> */}
-        {/* <FAQSection /> */}
+        <FAQSection />
         
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }
