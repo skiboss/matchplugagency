@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic"
-// import { Header } from "@/components/header"
+import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { HeroSection } from "@/components/sections/hero-section"
 import { Trustbar } from "@/components/sections/trustbar"
@@ -61,7 +61,7 @@ export default async function HomePage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* <Header /> */}
+      <Header />
       <main className="flex-1">
         <HeroSection />
         <Trustbar />
