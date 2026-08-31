@@ -33,7 +33,7 @@ export function Header() {
         <Link href="/" className="flex items-center gap-2">
           <div className="flex items-center">
             <Image 
-              src="/mp_logo.png" 
+              src="/mlogo.png" 
               alt="Matchplug Agency" 
               width={32}
               height={32}
