@@ -35,8 +35,8 @@ export function Header() {
             <Image 
               src="/mp_logo.png" 
               alt="Matchplug Agency" 
-              width={24}
-              height={24}
+              width={16}
+              height={16}
               // priority
               className="h-8 w-auto"
             />
