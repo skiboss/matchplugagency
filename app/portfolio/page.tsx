@@ -190,7 +190,7 @@ export default function PortfolioPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* <Header /> */}
+      <Header />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative pt-20 pb-12 sm:py-12 md:py-20 lg:py-24 overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/blooper.png')" }}>

@@ -31,7 +31,7 @@ const differentiators = [
 export default function ServicesPage() {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* <Header /> */}
+      <Header />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative pt-20 pb-12 sm:py-12 md:py-20 lg:py-32 overflow-hidden">
