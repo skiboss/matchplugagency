@@ -32,15 +32,15 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <div className="flex items-center">
-            <Image 
+            {/* <Image 
               src="/placeholder.jpg" 
               alt="Matchplug Agency" 
               width={16}
               height={16}
               priority
               className="h-8 w-auto"
-            />
-            {/* <img src="/mp_logo.png" alt="Matchplug Agency" className="h-8 w-auto" /> */}
+            /> */}
+            <img src="/mp_logo.png" alt="Matchplug Agency" className="h-8 w-auto" />
           </div>
         </Link>
 
