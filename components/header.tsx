@@ -52,9 +52,8 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-lg transition-colors ${
-                  isActive ? "text-foreground font-medium" : "text-[#A3A3A3] hover:text-muted-foreground"
-                }`}
+                className={`text-lg transition-colors ${isActive ? "text-foreground font-medium" : "text-[#A3A3A3] hover:text-muted-foreground"
+                  }`}
               >
                 {item.name}
               </Link>
@@ -91,9 +90,8 @@ export function Header() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`block text-sm font-medium transition-colors ${
-                      isActive ? "text-muted-foreground" : "text-foreground hover:text-muted-foreground"
-                    }`}
+                    className={`block text-sm font-medium transition-colors ${isActive ? "text-muted-foreground" : "text-foreground hover:text-muted-foreground"
+                      }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
